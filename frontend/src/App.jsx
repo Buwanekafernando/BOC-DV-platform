@@ -5,9 +5,9 @@ import api from "./services/api";
 import './App.css'
 import DatasetUpload from "./components/DatasetUpload";
 import DatasetProfile from "./components/DatasetProfile";
+import ChartBuilder from "./components/ChartBuilder";
 
 function App() {
-  const [count, setCount] = useState(0)
   const [datasetId, setDatasetId] = useState(null);
 
   useEffect(() => {
@@ -26,6 +26,7 @@ function App() {
         <>
           <p><strong>Dataset ID:</strong> {datasetId}</p>
           <DatasetProfile datasetId={datasetId} />
+          <ChartBuilder datasetId={datasetId} />
         </>
       )}
     </div>
