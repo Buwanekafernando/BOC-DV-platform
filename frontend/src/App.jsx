@@ -6,6 +6,7 @@ import './App.css'
 import DatasetUpload from "./components/DatasetUpload";
 import DatasetProfile from "./components/DatasetProfile";
 import ChartBuilder from "./components/ChartBuilder";
+import Dashboard from './components/Dashboard';
 
 function App() {
   const [datasetId, setDatasetId] = useState(null);
@@ -27,6 +28,7 @@ function App() {
           <p><strong>Dataset ID:</strong> {datasetId}</p>
           <DatasetProfile datasetId={datasetId} />
           <ChartBuilder datasetId={datasetId} />
+          <Dashboard datasetId={datasetId} />
         </>
       )}
     </div>
