@@ -3,9 +3,11 @@ import { useEffect } from "react";
 
 import api from "./services/api";
 import './App.css'
+import DatasetUpload from "./components/DatasetUpload";
 
 function App() {
   const [count, setCount] = useState(0)
+  const [datasetId, setDatasetId] = useState(null);
 
   useEffect(() => {
     api.get("/")
@@ -14,7 +16,17 @@ function App() {
   }, []);
 
   return (
-    <h1>BI Frontend Running</h1>
+    <div style={{ padding: "40px" }}>
+      <h1>BI Analytics Platform</h1>
+
+      <DatasetUpload onUploadSuccess={setDatasetId} />
+
+      {datasetId && (
+        <p>
+          <strong>Dataset ID:</strong> {datasetId}
+        </p>
+      )}
+    </div>
   )
 }
 
