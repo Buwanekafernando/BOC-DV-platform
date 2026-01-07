@@ -60,6 +60,29 @@ function Dashboard({ datasetId }) {
             </div>
 
             <button onClick={saveDashboard}>Save Dashboard</button>
+            <div id="dashboard-canvas">
+                <div
+                style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2, 1fr)",
+                    gap: "30px",
+                    marginTop: "20px"
+                }}
+            >
+                {charts.map(chart => (
+                    <div key={chart.id} style={{ border: "1px solid #ccc", padding: "20px" }}>
+                        <ChartBuilder
+                            key={chart.id}
+                            datasetId={datasetId}
+                            filters={filters}
+                        />
+                    </div>
+                ))}
+                </div>
+                <ExportButtons dashboardId={dashboardId} />
+            </div>
+
+        
         </div>
     );
 }
