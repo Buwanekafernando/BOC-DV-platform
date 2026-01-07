@@ -15,6 +15,7 @@ from routers import (
     dashboard_router
 )
 from app.api import export
+from app.api import sharing
 
 # Create database tables
 @asynccontextmanager
@@ -50,6 +51,7 @@ app.include_router(charts_router)
 app.include_router(reports_router)
 app.include_router(dashboard_router)
 app.include_router(export.router)
+app.include_router(sharing.router)
 
 # Root endpoint
 @app.get("/")

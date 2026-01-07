@@ -1,7 +1,11 @@
 from fastapi import APIRouter, Depends
 from seaborn import load_dataset
+
+
+
 from app.services.forecasting_service import forecast_time_series
 from app.services.jwt_dependency import get_current_user
+
 
 router = APIRouter(prefix="/analytics")
 
@@ -26,5 +30,5 @@ def trend(data: dict, user=Depends(get_current_user)):
 def anomaly(data: dict, user=Depends(get_current_user)):
     df = load_dataset(data["dataset_id"], user["id"])
     return detect_anomalies(df, data["value_column"])
-#The detect_anomalies function is assumed to be defined elsewhere in the codebase.
+
 

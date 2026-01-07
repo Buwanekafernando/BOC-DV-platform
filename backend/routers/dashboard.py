@@ -1,7 +1,6 @@
-
-
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+
 from models.db_models import User
 from models.schemas import DashboardCreate
 from utils.auth import get_current_user
@@ -38,7 +37,7 @@ def save_dashboard(
     )
 
     return {"dashboard_id": dashboard_id}
-
+#List dashboards for the current user
 
 @router.get("/dashboards")
 def list_dashboards(user=Depends(get_current_user)):
@@ -48,4 +47,4 @@ def list_dashboards(user=Depends(get_current_user)):
         WHERE user_id = %s
         ORDER BY created_at DESC
     """
-    return fetch_all(query, (user["id"],))
+    return fetch_all(query, (user["id"],))#Get dashboard details by ID

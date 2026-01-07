@@ -1,4 +1,5 @@
 import pandas as pd
+
 from statsmodels.tsa.arima.model import ARIMA
 
 def forecast_time_series(df, date_col, value_col, periods=12):
