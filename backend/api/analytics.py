@@ -15,3 +15,16 @@ def forecast(data: dict, user=Depends(get_current_user)):
         data["value_column"],
         data.get("periods", 12)
     )
+
+@router.post("/trend")
+def trend(data: dict, user=Depends(get_current_user)):
+    df = load_dataset(data["dataset_id"], user["id"])
+    return calculate_trend(df, data["date_column"], data["value_column"])
+#The calculate_trend function is assumed to be defined elsewhere in the codebase.
+
+@router.post("/anomaly")
+def anomaly(data: dict, user=Depends(get_current_user)):
+    df = load_dataset(data["dataset_id"], user["id"])
+    return detect_anomalies(df, data["value_column"])
+#The detect_anomalies function is assumed to be defined elsewhere in the codebase.
+
