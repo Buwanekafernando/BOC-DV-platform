@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from config import settings
@@ -19,3 +19,19 @@ def get_db():
         yield db
     finally:
         db.close()
+
+def execute_query(query, params=None):
+    with engine.connect() as conn:
+        result = conn.execute(text(query), params or ())
+        conn.commit()
+        return result
+
+def fetch_all(query, params=None):
+    with engine.connect() as conn:
+        result = conn.execute(text(query), params or ())
+        return result.fetchall()
+
+def fetch_one(query, params=None):
+    with engine.connect() as conn:
+        result = conn.execute(text(query), params or ())
+        return result.fetchone()
