@@ -7,6 +7,7 @@ import DatasetUpload from "./components/DatasetUpload";
 import DatasetProfile from "./components/DatasetProfile";
 import ChartBuilder from "./components/ChartBuilder";
 import Dashboard from './components/Dashboard';
+import boclogo from './assets/boclogo.png';
 
 function App() {
   const [datasetId, setDatasetId] = useState(null);
@@ -18,8 +19,9 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>BI Analytics Platform</h1>
+    <div style={{ padding: "40px", textAlign: "center" }}>
+      <img src={boclogo} alt="BOC Logo" style={{ maxWidth: "200px", marginBottom: "20px" }} />
+      <h1>BOC BI Analytics Platform</h1>
 
       <DatasetUpload onUploadSuccess={setDatasetId} />
 
