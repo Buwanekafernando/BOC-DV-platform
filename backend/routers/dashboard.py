@@ -6,6 +6,8 @@ from models.schemas import DashboardCreate
 from utils.auth import get_current_user
 from utils.dataset_manager import DatasetManager
 from services.query_engine import QueryEngine
+from database import execute_query, fetch_all
+import json
 
 
 
@@ -16,7 +18,7 @@ router = APIRouter(prefix="/dashboard", tags=["Dashboard"])
 @router.post("/dashboards")
 def save_dashboard(
     dashboard: DashboardCreate,
-    user=Depends(get_current_user)
+    user: User = Depends(get_current_user)
 ):
     query = """
         INSERT INTO dashboards (user_id, name, dataset_id, filters, charts, layout)
@@ -24,10 +26,10 @@ def save_dashboard(
         RETURNING id
     """
     
-    dashboard_id = execute_query(
+    result = execute_query(
         query,
         (
-            user["id"],
+            str(user.id),
             dashboard.name,
             dashboard.dataset_id,
             json.dumps(dashboard.filters),
@@ -35,16 +37,17 @@ def save_dashboard(
             json.dumps(dashboard.layout)
         )
     )
+    dashboard_id = result.fetchone()[0]
 
     return {"dashboard_id": dashboard_id}
 #List dashboards for the current user
 
 @router.get("/dashboards")
-def list_dashboards(user=Depends(get_current_user)):
+def list_dashboards(user: User = Depends(get_current_user)):
     query = """
         SELECT id, name, created_at
         FROM dashboards
         WHERE user_id = %s
         ORDER BY created_at DESC
     """
-    return fetch_all(query, (user["id"],))#Get dashboard details by ID
+    return fetch_all(query, (str(user.id),))
