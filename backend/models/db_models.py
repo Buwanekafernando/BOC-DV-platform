@@ -9,7 +9,7 @@ class User(Base):
 
     id = Column(UNIQUEIDENTIFIER, primary_key=True, server_default=func.newid())
     username = Column(String, nullable=False)
-    email = Column(String, unique=True, index=True, nullable=False)
+    email = Column(String, nullable=False)
     created_at = Column(DateTime, server_default=func.now())
 
     datasets = relationship("Dataset", back_populates="owner")
