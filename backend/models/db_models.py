@@ -9,7 +9,9 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True, nullable=False)
     password_hash = Column(String, nullable=False)
-    full_name = Column(String, nullable=True)    role = Column(String, default="user")  # user, admin    created_at = Column(DateTime, default=datetime.utcnow)
+    full_name = Column(String, nullable=True)
+    role = Column(String, default="user")  # user, admin
+    created_at = Column(DateTime, default=datetime.utcnow)
 
     datasets = relationship("Dataset", back_populates="owner")
     reports = relationship("Report", back_populates="owner")

@@ -1,5 +1,5 @@
 import ChartBuilder from "./ChartBuilder";
-import "./styles/grid.css";
+import "../styles/grid.css";
 
 function GridChart({ datasetId }) {
   return (
