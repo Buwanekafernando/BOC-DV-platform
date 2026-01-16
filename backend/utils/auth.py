@@ -53,21 +53,18 @@ def decode_access_token(token: str) -> TokenData:
         raise credentials_exception
 
 async def get_current_user(
+    token: str = Depends(oauth2_scheme),
     db: Session = Depends(get_db)
 ) -> User:
-    """Get the current authenticated user (bypassed for demo)"""
-    # For demo purposes, return a mock user
-    user = db.query(User).filter(User.email == "demo@example.com").first()
+    """Get the current authenticated user"""
+    token_data = decode_access_token(token)
+    user = db.query(User).filter(User.email == token_data.email).first()
     if not user:
-        # Create a demo user if not exists
-        user = User(
-            username="demo",
-            email="demo@example.com",
-            password_hash=get_password_hash("demo123")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="User not found",
+            headers={"WWW-Authenticate": "Bearer"},
         )
-        db.add(user)
-        db.commit()
-        db.refresh(user)
     return user
 
 def authenticate_user(db: Session, email: str, password: str) -> Optional[User]:
