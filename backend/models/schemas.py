@@ -43,6 +43,8 @@ class DatasetMetadata(BaseModel):
     name: str
     file_path: str
     schema_json: Optional[str]
+    transformations: Optional[str]
+    measures: Optional[str]
     uploaded_at: datetime
 
     class Config:
@@ -173,3 +175,19 @@ class DashboardCreate(BaseModel):
     filters: Optional[Dict]
     charts: List[ChartConfig]
     layout: Optional[Dict]
+
+# ============= Data Prep & Modeling Schemas =============
+class TransformationStep(BaseModel):
+    type: str  # rename, drop, type_convert, filter, sort, derived_column
+    params: Dict[str, Any]
+
+class DatasetTransformUpdate(BaseModel):
+    transformations: List[TransformationStep]
+
+class MeasureDefinition(BaseModel):
+    name: str
+    formula: str  # e.g., "SUM(Sales) / SUM(Quantity)" or simple field ref
+    description: Optional[str] = None
+
+class DatasetMeasuresUpdate(BaseModel):
+    measures: List[MeasureDefinition]

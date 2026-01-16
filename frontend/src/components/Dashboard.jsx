@@ -41,6 +41,17 @@ function Dashboard({ datasetId, initialData }) {
         setCharts(prev => prev.map(c => c.id === id ? { ...c, ...config } : c));
     };
 
+    const handleChartInteract = (column, value) => {
+        // Cross-filtering / Drill-down logic
+        // Update dashboard-wide filters when a chart point is clicked
+        setFilters(prev => ({
+            ...prev,
+            [column]: value
+        }));
+    };
+
+    const clearFilters = () => setFilters({});
+
     const downloadAsPNG = async () => {
         const canvas = document.getElementById("dashboard-canvas");
         if (!canvas) return;
@@ -108,6 +119,9 @@ function Dashboard({ datasetId, initialData }) {
             }}>
                 <FilterPanel filters={filters} setFilters={setFilters} />
                 <div style={{ display: 'flex', gap: '10px' }}>
+                    {Object.keys(filters).length > 0 && (
+                        <button onClick={clearFilters} className="btn btn-outline" style={{ color: 'var(--color-error)' }}>🧹 Clear Filters</button>
+                    )}
                     <button onClick={addChart} className="btn btn-primary">➕ Add Chart</button>
                     <button onClick={downloadAsPNG} className="btn btn-secondary" style={{ backgroundColor: 'var(--color-tertiary)', color: 'white' }}>🖼️ Download PNG</button>
                     <button onClick={saveDashboard} className="btn btn-success" style={{ backgroundColor: 'var(--color-success)', color: 'white' }}>💾 Save Dashboard</button>
@@ -167,6 +181,7 @@ function Dashboard({ datasetId, initialData }) {
                             filters={filters}
                             initialConfig={chart}
                             onUpdate={(config) => updateChart(chart.id, config)}
+                            onInteract={handleChartInteract}
                         />
                     </div>
                 ))}

@@ -12,7 +12,9 @@ from routers import (
     query_router,
     charts_router,
     reports_router,
-    dashboard_router
+    dashboard_router,
+    data_preparation_router,
+    data_modeling_router
 )
 from api import export
 from api import sharing
@@ -52,6 +54,8 @@ app.include_router(reports_router)
 app.include_router(dashboard_router)
 app.include_router(export.router)
 app.include_router(sharing.router)
+app.include_router(data_preparation_router)
+app.include_router(data_modeling_router)
 
 # Root endpoint
 @app.get("/")

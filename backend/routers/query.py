@@ -6,6 +6,7 @@ from models.schemas import QueryRequest, QueryResponse
 from utils.auth import get_current_user
 from utils.dataset_manager import DatasetManager
 from services.query_engine import QueryEngine
+import json
 
 router = APIRouter(prefix="/query", tags=["Query"])
 
@@ -19,8 +20,11 @@ async def execute_query(
     """Execute a query on a dataset with filters and aggregations"""
     dataset = DatasetManager.verify_dataset_access(db, dataset_id, current_user)
     
+    transformations = json.loads(dataset.transformations) if dataset.transformations else []
+    measures = json.loads(dataset.measures) if dataset.measures else []
+    
     try:
-        result = QueryEngine.execute_query(dataset.file_path, query)
+        result = QueryEngine.execute_query(dataset.file_path, query, transformations, measures)
         return result
     except Exception as e:
         raise HTTPException(
@@ -38,8 +42,11 @@ async def preview_data(
     """Preview first N rows of a dataset"""
     dataset = DatasetManager.verify_dataset_access(db, dataset_id, current_user)
     
+    transformations = json.loads(dataset.transformations) if dataset.transformations else []
+    measures = json.loads(dataset.measures) if dataset.measures else []
+    
     try:
-        result = QueryEngine.preview_data(dataset.file_path, limit)
+        result = QueryEngine.preview_data(dataset.file_path, limit, transformations, measures)
         return result
     except Exception as e:
         raise HTTPException(

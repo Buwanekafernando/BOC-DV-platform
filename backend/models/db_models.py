@@ -24,6 +24,8 @@ class Dataset(Base):
     name = Column(String, nullable=False)
     file_path = Column(String, nullable=False)
     schema_json = Column(String, nullable=True)  # Updated to match SQL
+    transformations = Column(Text, nullable=True)  # JSON list of steps
+    measures = Column(Text, nullable=True)        # JSON list of measure definitions
     uploaded_at = Column(DateTime, server_default=func.now())
 
     owner = relationship("User", back_populates="datasets")

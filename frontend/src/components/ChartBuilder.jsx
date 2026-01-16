@@ -6,13 +6,14 @@ import {
 
 import api from "../services/api";
 
-function ChartBuilder({ datasetId, onUpdate, initialConfig }) {
+function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFilters, onInteract }) {
     const [columns, setColumns] = useState([]);
     const [xAxis, setXAxis] = useState("");
     const [yAxis, setYAxis] = useState("");
     const [aggregation, setAggregation] = useState("sum");
     const [chartType, setChartType] = useState("bar");
     const [sortOrder, setSortOrder] = useState("desc");
+    const [useConditionalFormatting, setUseConditionalFormatting] = useState(false);
     const [chartData, setChartData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
@@ -39,12 +40,12 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig }) {
         }
     }, [initialConfig, initialized]);
 
-    // Auto-generate chart when configuration and columns are ready
+    // Auto-generate chart when configuration, columns, or external filters are ready
     useEffect(() => {
-        if (initialized && columns.length > 0 && xAxis && yAxis && chartData.length === 0 && !loading) {
+        if (initialized && columns.length > 0 && xAxis && yAxis && !loading) {
             generateChart();
         }
-    }, [initialized, columns, xAxis, yAxis, chartData.length, loading]);
+    }, [initialized, columns, xAxis, yAxis, externalFilters]);
 
     // Sync state back to parent for saving
     useEffect(() => {
@@ -87,6 +88,9 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig }) {
                 sort_by: [
                     { column: `${yAxis}_${aggregation}`, order: sortOrder }
                 ],
+                filters: externalFilters ? Object.entries(externalFilters).map(([k, v]) => ({
+                    column: k, operator: "eq", value: v
+                })) : [],
                 limit: 20
             };
 
@@ -101,6 +105,20 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig }) {
     };
 
     // The backend returns keys like "value_sum"
+    const handleChartClick = (data) => {
+        if (onInteract && data && data.activePayload && data.activePayload[0]) {
+            const point = data.activePayload[0].payload;
+            onInteract(xAxis, point[xAxis]);
+        }
+    };
+
+    const getBarColor = (value, avg) => {
+        if (!useConditionalFormatting) return "var(--color-primary)";
+        return value >= avg ? "#4caf50" : "#ff5252"; // Green for above avg, Red for below
+    };
+
+    const avgValue = chartData.reduce((acc, curr) => acc + (curr[dataKeyY] || 0), 0) / (chartData.length || 1);
+
     const dataKeyY = `${yAxis}_${aggregation}`;
 
     return (
@@ -159,6 +177,13 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig }) {
                     </select>
                 </div>
 
+                <div className="form-group">
+                    <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <input type="checkbox" checked={useConditionalFormatting} onChange={e => setUseConditionalFormatting(e.target.checked)} />
+                        Conditional Colors
+                    </label>
+                </div>
+
                 <div className="form-group" style={{ display: 'flex', alignItems: 'flex-end' }}>
                     <button
                         onClick={generateChart}
@@ -177,22 +202,29 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig }) {
                 {chartData.length > 0 ? (
                     <ResponsiveContainer width="100%" height="100%">
                         {chartType === "bar" ? (
-                            <BarChart data={chartData}>
+                            <BarChart data={chartData} onClick={handleChartClick}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey={xAxis} />
                                 <YAxis />
-                                <Tooltip />
+                                <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
                                 <Legend />
-                                <Bar dataKey={dataKeyY} fill="var(--color-primary)" name={`${aggregation.toUpperCase()} of ${yAxis}`} />
+                                <Bar
+                                    dataKey={dataKeyY}
+                                    name={`${aggregation.toUpperCase()} of ${yAxis}`}
+                                >
+                                    {chartData.map((entry, index) => (
+                                        <cell key={`cell-${index}`} fill={getBarColor(entry[dataKeyY], avgValue)} />
+                                    ))}
+                                </Bar>
                             </BarChart>
                         ) : (
-                            <LineChart data={chartData}>
+                            <LineChart data={chartData} onClick={handleChartClick}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey={xAxis} />
                                 <YAxis />
                                 <Tooltip />
                                 <Legend />
-                                <Line type="monotone" dataKey={dataKeyY} stroke="var(--color-tertiary)" strokeWidth={2} name={`${aggregation.toUpperCase()} of ${yAxis}`} />
+                                <Line type="monotone" dataKey={dataKeyY} stroke="var(--color-tertiary)" strokeWidth={2} name={`${aggregation.toUpperCase()} of ${yAxis}`} activeDot={{ r: 8, onClick: (e, payload) => handleChartClick({ activePayload: [payload] }) }} />
                             </LineChart>
                         )}
                     </ResponsiveContainer>

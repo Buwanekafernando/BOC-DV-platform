@@ -2,16 +2,32 @@ import pandas as pd
 from typing import List, Dict, Any
 from models.schemas import QueryRequest, AggregationType, FilterCondition
 from utils.validators import apply_filters, validate_columns
+from services.transformation_service import TransformationService
+from services.modeling_service import ModelingService
+import json
 
 class QueryEngine:
     """Service for executing queries on CSV datasets"""
     
     @staticmethod
-    def execute_query(file_path: str, query: QueryRequest) -> Dict[str, Any]:
+    def execute_query(
+        file_path: str,
+        query: QueryRequest,
+        transformations: List[Dict[str, Any]] = None,
+        measures: List[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
         """Execute a query on a dataset"""
         # Load data
         df = pd.read_csv(file_path)
         
+        # Apply data transformations (Data Prep)
+        if transformations:
+            df = TransformationService.apply_transformations(df, transformations)
+            
+        # Apply measures (Data Modeling)
+        if measures:
+            df = ModelingService.apply_measures(df, measures)
+            
         # Apply filters
         if query.filters:
             df = apply_filters(df, query.filters)
@@ -128,9 +144,22 @@ class QueryEngine:
         return pd.DataFrame(results)
     
     @staticmethod
-    def preview_data(file_path: str, limit: int = 100) -> Dict[str, Any]:
+    def preview_data(
+        file_path: str,
+        limit: int = 100,
+        transformations: List[Dict[str, Any]] = None,
+        measures: List[Dict[str, Any]] = None
+    ) -> Dict[str, Any]:
         """Preview first N rows of a dataset"""
-        df = pd.read_csv(file_path, nrows=limit)
+        df = pd.read_csv(file_path) # Need full lead if transformations depend on all rows, but head(limit) for performance
+        
+        if transformations:
+            df = TransformationService.apply_transformations(df, transformations)
+        
+        if measures:
+            df = ModelingService.apply_measures(df, measures)
+            
+        df = df.head(limit)
         
         return {
             "data": df.to_dict(orient="records"),
