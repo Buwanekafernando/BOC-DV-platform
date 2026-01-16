@@ -57,6 +57,38 @@ def list_dashboards(
         for d in dashboards
     ]
 
+@router.put("/{dashboard_id}", status_code=200)
+def update_dashboard(
+    dashboard_id: str,
+    dashboard_in: DashboardCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    dashboard = db.query(Dashboard).filter(
+        Dashboard.id == dashboard_id,
+        Dashboard.user_id == current_user.id
+    ).first()
+    
+    if not dashboard:
+        raise HTTPException(status_code=404, detail="Dashboard not found")
+        
+    try:
+        dashboard.name = dashboard_in.name
+        dashboard.dataset_id = dashboard_in.dataset_id
+        dashboard.filters = json.dumps(dashboard_in.filters) if dashboard_in.filters else None
+        dashboard.charts = json.dumps([c.dict() for c in dashboard_in.charts]) if dashboard_in.charts else None
+        dashboard.layout = json.dumps(dashboard_in.layout) if dashboard_in.layout else None
+        
+        db.commit()
+        db.refresh(dashboard)
+        return {"dashboard_id": str(dashboard.id), "message": "Updated successfully"}
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Database error: {str(e)}"
+        )
+
 @router.delete("/{dashboard_id}", status_code=204)
 def delete_dashboard(
     dashboard_id: str,

@@ -9,6 +9,7 @@ function Dashboard({ datasetId, initialData }) {
     const [charts, setCharts] = useState([]);
     const [filters, setFilters] = useState({});
     const [dashboardName, setDashboardName] = useState("Sales Overview");
+    const [dashboardId, setDashboardId] = useState(null);
 
     // Load initial data if provided
     useEffect(() => {
@@ -16,6 +17,13 @@ function Dashboard({ datasetId, initialData }) {
             if (initialData.charts) setCharts(initialData.charts.map((c, index) => ({ ...c, id: c.id || Date.now() + index })));
             if (initialData.filters) setFilters(initialData.filters);
             if (initialData.name) setDashboardName(initialData.name);
+            if (initialData.id) setDashboardId(initialData.id);
+        } else {
+            // Reset for new dashboard
+            setCharts([]);
+            setFilters({});
+            setDashboardName("Sales Overview");
+            setDashboardId(null);
         }
     }, [initialData]);
 
@@ -68,8 +76,14 @@ function Dashboard({ datasetId, initialData }) {
         };
 
         try {
-            await api.post("/dashboards/", payload);
-            alert("Dashboard saved successfully! Preparing download...");
+            if (dashboardId) {
+                await api.put(`/dashboards/${dashboardId}/`, payload);
+                alert("Dashboard updated successfully! Preparing download...");
+            } else {
+                const res = await api.post("/dashboards/", payload);
+                setDashboardId(res.data.dashboard_id);
+                alert("Dashboard saved successfully! Preparing download...");
+            }
             // Automatically trigger download after save
             setTimeout(downloadAsPNG, 500);
         } catch (e) {
@@ -151,6 +165,7 @@ function Dashboard({ datasetId, initialData }) {
                         <ChartBuilder
                             datasetId={datasetId}
                             filters={filters}
+                            initialConfig={chart}
                             onUpdate={(config) => updateChart(chart.id, config)}
                         />
                     </div>

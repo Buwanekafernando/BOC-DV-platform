@@ -6,7 +6,7 @@ import {
 
 import api from "../services/api";
 
-function ChartBuilder({ datasetId, onUpdate }) {
+function ChartBuilder({ datasetId, onUpdate, initialConfig }) {
     const [columns, setColumns] = useState([]);
     const [xAxis, setXAxis] = useState("");
     const [yAxis, setYAxis] = useState("");
@@ -16,17 +16,35 @@ function ChartBuilder({ datasetId, onUpdate }) {
     const [chartData, setChartData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const [initialized, setInitialized] = useState(false);
 
     useEffect(() => {
         if (!datasetId) return;
 
         api.get(`/datasets/${datasetId}/profile`)
             .then(res => {
-                // Store full column objects: { name, dtype, ... }
                 setColumns(res.data.columns);
             })
             .catch(err => console.error("Failed to load columns", err));
     }, [datasetId]);
+
+    // Hydrate state from initialConfig
+    useEffect(() => {
+        if (initialConfig && !initialized) {
+            if (initialConfig.x_axis) setXAxis(initialConfig.x_axis);
+            if (initialConfig.y_axis) setYAxis(initialConfig.y_axis);
+            if (initialConfig.aggregation) setAggregation(initialConfig.aggregation);
+            if (initialConfig.chart_type) setChartType(initialConfig.chart_type);
+            setInitialized(true);
+        }
+    }, [initialConfig, initialized]);
+
+    // Auto-generate chart when configuration and columns are ready
+    useEffect(() => {
+        if (initialized && columns.length > 0 && xAxis && yAxis && chartData.length === 0 && !loading) {
+            generateChart();
+        }
+    }, [initialized, columns, xAxis, yAxis, chartData.length, loading]);
 
     // Sync state back to parent for saving
     useEffect(() => {
