@@ -8,13 +8,15 @@ import Dashboard from './components/Dashboard';
 import DashboardList from './components/DashboardList';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import Login from './components/Login';
+import DataPreparation from './components/DataPreparation';
+import MeasureBuilder from './components/MeasureBuilder';
 import boclogo from './assets/boclogo.png';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
 function MainApp() {
   const { user, logout } = useAuth();
   const [datasetId, setDatasetId] = useState(null);
-  const [currentView, setCurrentView] = useState("data"); // 'data', 'dashboard', 'analytics'
+  const [currentView, setCurrentView] = useState("data"); // 'data', 'prep', 'modeling', 'dashboard', 'analytics'
   const [selectedDashboard, setSelectedDashboard] = useState(null);
 
   const handleUploadSuccess = (id) => {
@@ -79,6 +81,19 @@ function MainApp() {
                 icon="📈"
                 label="Analytics"
               />
+              <div style={{ margin: '10px 0', borderBottom: '1px solid var(--border-color)' }}></div>
+              <NavButton
+                active={currentView === "prep"}
+                onClick={() => setCurrentView("prep")}
+                icon="🛠️"
+                label="Prepare Data"
+              />
+              <NavButton
+                active={currentView === "modeling"}
+                onClick={() => setCurrentView("modeling")}
+                icon="📐"
+                label="Data Modeling"
+              />
             </div>
           </nav>
         )}
@@ -140,6 +155,18 @@ function MainApp() {
                     <div className="card">
                       <AdvancedAnalytics datasetId={datasetId} />
                     </div>
+                  </div>
+                )}
+
+                {currentView === "prep" && (
+                  <div className="fade-in">
+                    <DataPreparation datasetId={datasetId} />
+                  </div>
+                )}
+
+                {currentView === "modeling" && (
+                  <div className="fade-in">
+                    <MeasureBuilder datasetId={datasetId} />
                   </div>
                 )}
               </>
