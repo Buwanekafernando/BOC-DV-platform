@@ -5,6 +5,19 @@ function DatasetList({ onSelect }) {
     const [datasets, setDatasets] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const handleDelete = async (id, e) => {
+        e.stopPropagation(); // Prevent onSelect from firing
+        if (window.confirm("Are you sure you want to delete this dataset?")) {
+            try {
+                await api.delete(`/datasets/${id}`);
+                setDatasets(prev => prev.filter(d => d.id !== id));
+            } catch (err) {
+                console.error("Failed to delete dataset", err);
+                alert("Failed to delete dataset. Please try again.");
+            }
+        }
+    };
+
     useEffect(() => {
         api.get("/datasets/")
             .then(res => setDatasets(res.data))
@@ -23,13 +36,23 @@ function DatasetList({ onSelect }) {
                             <button
                                 onClick={() => onSelect(d.id)}
                                 className="btn btn-secondary"
-                                style={{ width: '100%', justifyContent: 'flex-start', textAlign: 'left', display: 'flex', alignItems: 'center' }}
+                                style={{ width: '100%', justifyContent: 'space-between', textAlign: 'left', display: 'flex', alignItems: 'center' }}
                             >
-                                <span style={{ marginRight: '8px', fontSize: '1.2rem' }}>📄</span>
-                                <div>
-                                    <div style={{ fontWeight: '600' }}>{d.name}</div>
-                                    <div style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>Uploaded on {new Date(d.created_at || Date.now()).toLocaleDateString()}</div>
+                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                    <span style={{ marginRight: '8px', fontSize: '1.2rem' }}>📄</span>
+                                    <div>
+                                        <div style={{ fontWeight: '600' }}>{d.name}</div>
+                                        <div style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>Uploaded on {new Date(d.created_at || Date.now()).toLocaleDateString()}</div>
+                                    </div>
                                 </div>
+                                <button
+                                    onClick={(e) => handleDelete(d.id, e)}
+                                    className="btn-icon"
+                                    style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '5px' }}
+                                    title="Delete Dataset"
+                                >
+                                    🗑️
+                                </button>
                             </button>
                         </li>
                     ))}
