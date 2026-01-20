@@ -125,6 +125,15 @@ class QueryEngine:
             if column in grouped.columns and column not in group_by:
                 grouped.rename(columns={column: f"{column}_{function}"}, inplace=True)
         
+        # If we have 2 group_by columns, pivot them for charts (Stacked/Grouped)
+        if len(group_by) == 2 and len(aggregations) == 1:
+            val_col = f"{aggregations[0].column}_{aggregations[0].function.value}"
+            # Pivot: rows=group_by[0], columns=group_by[1], values=agg_result
+            pivot_df = grouped.pivot(index=group_by[0], columns=group_by[1], values=val_col).reset_index()
+            # Fill NaN with 0 for charts
+            pivot_df = pivot_df.fillna(0)
+            return pivot_df
+
         return grouped
     
     @staticmethod
