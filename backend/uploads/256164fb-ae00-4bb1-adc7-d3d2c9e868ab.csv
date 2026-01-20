@@ -1,0 +1,501 @@
+EEID,Job Title,Department,Business Unit,Gender,Ethnicity,Age,Hire Date,Annual Salary,Bonus %,Country,City,Exit Date
+E93810,Technical Architect,IT,Speciality Products,Male,Asian,30,30/11/16,"$143,105.97",20%,United States,Miami,
+E13905,Technical Architect,Finance,Manufacturing,Male,Asian,63,12/12/98,"$138,185.50",15%,Canada,Vancouver,
+E10851,Director,Marketing,Corporate,Female,Caucasian,31,4/1/96,"$70,143.93",10%,United States,New York,
+E57052,Account Representative,Operations,Speciality Products,Male,Hispanic,56,22/5/20,"$57,475.66",15%,United States,Miami,23/9/22
+E92397,Account Representative,Operations,Manufacturing,Male,Black,64,29/6/03,"$71,905.76",10%,United States,Seattle,
+E59823,Sr. Analyst,HR,Speciality Products,Male,Caucasian,44,2/10/02,"$69,330.98",10%,UK,London,
+E32431,Computer Systems Manager,Finance,Corporate,Female,Caucasian,62,28/11/99,"$136,342.67",5%,UK,Manchester,
+E17331,Computer Systems Manager,IT,Speciality Products,Female,Caucasian,26,20/3/20,"$69,537.60",20%,UK,Manchester,1/2/21
+E75435,Manager,Marketing,Corporate,Male,Caucasian,30,8/3/18,"$74,527.85",20%,Germany,Munich,
+E66155,Manager,Sales,Manufacturing,Male,Hispanic,27,11/5/20,"$145,809.50",0%,Canada,Toronto,
+E65333,Technical Architect,HR,Corporate,Female,Caucasian,57,18/9/13,"$160,509.16",0%,UK,London,
+E80381,Sr. Analyst,Marketing,Speciality Products,Male,Caucasian,49,12/2/98,"$62,142.09",0%,UK,Manchester,
+E33416,Technical Architect,Marketing,Speciality Products,Male,Asian,45,2/4/15,"$146,751.51",20%,Australia,Sydney,
+E74042,Sr. Manager,IT,Speciality Products,Female,Asian,25,7/7/09,"$73,722.02",20%,United States,New York,
+E19071,Director,Finance,Corporate,Male,Caucasian,55,28/3/96,"$162,140.63",15%,Canada,Toronto,
+E62296,Account Representative,HR,Corporate,Male,Asian,36,4/3/96,"$48,963.63",0%,Germany,Berlin,
+E10942,Technical Architect,Marketing,Research & Development,Male,Black,24,7/5/98,"$160,348.96",0%,Germany,Berlin,14/10/05
+E73624,Computer Systems Manager,Operations,Manufacturing,Female,Asian,52,28/1/03,"$153,049.58",5%,United States,New York,
+E56438,Manager,HR,Corporate,Male,Black,25,9/5/12,"$96,366.98",10%,Australia,Sydney,5/8/22
+E34931,Analyst,Finance,Corporate,Male,Caucasian,51,23/1/96,"$74,972.90",0%,India,Delhi,26/2/15
+E95477,Sr. Manager,IT,Manufacturing,Male,Hispanic,53,4/12/01,"$107,390.18",15%,United States,Seattle,
+E61173,Sr. Analyst,HR,Speciality Products,Female,Hispanic,31,10/7/19,"$66,585.70",5%,United States,Miami,
+E17989,Account Representative,IT,Research & Development,Female,Asian,25,9/4/17,"$174,509.05",0%,Australia,Sydney,27/3/23
+E18907,Computer Systems Manager,HR,Research & Development,Male,Black,61,13/9/13,"$51,477.68",20%,Germany,Munich,
+E36772,Account Representative,Finance,Speciality Products,Female,Asian,64,7/6/09,"$130,370.11",15%,China,Beijing,7/3/13
+E91416,Technical Architect,IT,Manufacturing,Female,Asian,44,11/6/10,"$163,320.98",5%,China,Shanghai,19/6/20
+E81200,Sr. Analyst,Operations,Research & Development,Female,Black,30,16/8/04,"$77,025.23",0%,UK,London,4/11/04
+E89276,Computer Systems Manager,Marketing,Speciality Products,Male,Caucasian,54,23/12/20,"$108,394.46",0%,United States,Phoenix,
+E15778,Sr. Manager,Sales,Manufacturing,Female,Asian,50,30/7/22,"$117,235.26",15%,Germany,Berlin,4/4/23
+E29536,Sr. Manager,Sales,Manufacturing,Female,Asian,24,30/11/18,"$83,156.17",0%,China,Beijing,
+E97416,Technical Architect,Sales,Corporate,Male,Asian,32,16/7/09,"$176,668.84",5%,India,Mumbai,30/4/15
+E53540,Manager,Marketing,Manufacturing,Female,Asian,28,12/8/04,"$93,555.84",0%,Australia,Melbourne,26/11/09
+E70332,Account Representative,Sales,Manufacturing,Male,Black,64,26/6/02,"$67,038.17",10%,China,Beijing,
+E46585,Account Representative,Marketing,Corporate,Female,Black,29,19/2/21,"$162,785.38",10%,Canada,Vancouver,26/7/22
+E88193,Manager,Sales,Speciality Products,Female,Black,46,21/8/98,"$165,930.66",5%,China,Beijing,
+E10221,Computer Systems Manager,Sales,Corporate,Male,Caucasian,61,25/4/98,"$83,948.19",0%,UK,Manchester,
+E97410,Manager,Sales,Corporate,Female,Asian,34,1/2/08,"$98,862.49",15%,UK,London,
+E49446,Manager,Operations,Research & Development,Female,Caucasian,35,13/6/98,"$100,184.34",20%,Germany,Munich,
+E67954,Computer Systems Manager,Operations,Corporate,Male,Black,40,17/5/07,"$112,163.28",20%,China,Beijing,
+E40784,Sr. Analyst,Finance,Manufacturing,Male,Black,24,30/12/23,"$74,277.96",15%,Germany,Berlin,
+E92544,Computer Systems Manager,Marketing,Corporate,Female,Hispanic,37,11/11/06,"$60,659.99",0%,Australia,Sydney,
+E38683,Director,Marketing,Corporate,Male,Asian,29,13/9/15,"$103,904.66",15%,UK,Manchester,
+E68008,Manager,Operations,Corporate,Male,Hispanic,50,28/2/04,"$76,286.82",5%,Australia,Melbourne,
+E78327,Analyst,Marketing,Manufacturing,Female,Hispanic,26,15/8/22,"$139,896.28",5%,China,Shanghai,
+E80798,Technical Architect,Finance,Manufacturing,Male,Hispanic,31,20/8/96,"$138,898.68",0%,India,Bangalore,
+E71069,Manager,IT,Manufacturing,Female,Hispanic,59,27/12/19,"$172,448.68",0%,Australia,Melbourne,
+E56105,Sr. Analyst,HR,Corporate,Male,Hispanic,36,16/10/10,"$78,210.94",15%,United States,Phoenix,
+E99016,Manager,Marketing,Manufacturing,Female,Asian,61,28/5/13,"$114,777.31",15%,Germany,Berlin,12/7/15
+E66179,Director,HR,Manufacturing,Male,Caucasian,46,15/1/08,"$85,829.37",15%,China,Shanghai,
+E59692,Sr. Analyst,HR,Speciality Products,Male,Hispanic,23,3/11/97,"$144,863.40",0%,China,Beijing,
+E95426,Sr. Manager,IT,Manufacturing,Male,Black,61,10/12/13,"$61,333.53",5%,India,Delhi,5/12/18
+E38569,Analyst,Marketing,Speciality Products,Female,Asian,60,19/5/23,"$125,014.65",0%,Australia,Sydney,
+E24168,Sr. Manager,Sales,Corporate,Female,Asian,26,19/7/16,"$122,893.70",5%,United States,Chicago,
+E88697,Technical Architect,Operations,Research & Development,Female,Hispanic,64,15/3/16,"$91,879.92",20%,UK,Manchester,10/5/22
+E65057,Analyst,IT,Corporate,Female,Hispanic,31,21/10/14,"$100,968.20",20%,UK,Manchester,
+E80539,Analyst,HR,Corporate,Female,Caucasian,37,13/9/01,"$156,302.34",0%,China,Shanghai,25/1/04
+E70910,Manager,Sales,Research & Development,Female,Caucasian,33,19/9/96,"$108,256.99",10%,Australia,Melbourne,
+E88139,Sr. Analyst,Operations,Research & Development,Male,Black,37,28/8/17,"$140,810.45",15%,Germany,Berlin,
+E94659,Analyst,HR,Research & Development,Male,Caucasian,36,30/11/02,"$96,616.16",5%,China,Chongqing,
+E72031,Account Representative,HR,Speciality Products,Female,Hispanic,39,18/6/21,"$82,927.22",5%,United States,Seattle,
+E80236,Director,Finance,Manufacturing,Female,Caucasian,59,2/1/05,"$176,724.98",20%,Germany,Munich,
+E35443,Sr. Analyst,Finance,Speciality Products,Male,Caucasian,22,15/11/97,"$139,122.59",5%,China,Beijing,
+E82529,Sr. Analyst,Marketing,Manufacturing,Female,Black,22,5/4/24,"$120,368.99",15%,India,Bangalore,
+E16734,Sr. Analyst,HR,Research & Development,Male,Hispanic,53,30/1/03,"$50,371.50",0%,Canada,Toronto,
+E49824,Technical Architect,Finance,Research & Development,Female,Asian,55,22/8/24,"$93,252.92",15%,China,Chongqing,
+E50026,Sr. Manager,Operations,Research & Development,Male,Asian,38,6/8/98,"$132,459.94",5%,Canada,Toronto,
+E30517,Sr. Manager,HR,Corporate,Female,Caucasian,24,4/2/08,"$72,406.67",10%,UK,Manchester,20/7/17
+E40595,Sr. Analyst,Marketing,Manufacturing,Female,Black,56,2/8/10,"$71,473.32",5%,China,Beijing,26/5/21
+E31747,Sr. Analyst,Operations,Speciality Products,Female,Black,51,16/7/23,"$136,414.92",15%,China,Chongqing,
+E67377,Technical Architect,Operations,Research & Development,Female,Caucasian,60,28/7/07,"$75,051.51",0%,Canada,Toronto,
+E98117,Sr. Analyst,Operations,Research & Development,Male,Hispanic,55,10/9/00,"$131,211.33",10%,Canada,Vancouver,
+E74451,Technical Architect,HR,Speciality Products,Female,Caucasian,42,3/10/07,"$133,818.69",5%,China,Shanghai,
+E47777,Manager,Operations,Research & Development,Female,Black,42,1/4/07,"$75,335.84",0%,Australia,Melbourne,
+E10150,Analyst,HR,Research & Development,Male,Caucasian,61,15/4/02,"$145,902.04",15%,Australia,Sydney,1/2/25
+E81987,Director,Sales,Corporate,Female,Black,23,29/3/04,"$176,240.55",20%,Australia,Sydney,
+E50730,Sr. Manager,Operations,Corporate,Male,Asian,29,14/1/19,"$104,602.71",0%,UK,London,
+E48254,Sr. Analyst,HR,Corporate,Female,Asian,51,1/6/18,"$117,177.11",15%,Canada,Toronto,
+E46208,Manager,Sales,Speciality Products,Male,Caucasian,41,17/3/17,"$157,246.63",20%,UK,Manchester,
+E68529,Analyst,Sales,Speciality Products,Female,Hispanic,42,3/8/97,"$161,744.24",5%,Germany,Munich,25/4/18
+E63841,Sr. Manager,Sales,Corporate,Female,Hispanic,64,6/10/16,"$150,935.11",5%,India,Mumbai,21/3/18
+E87356,Account Representative,IT,Corporate,Male,Hispanic,22,2/5/13,"$141,142.14",15%,Australia,Sydney,1/7/17
+E44737,Account Representative,Operations,Corporate,Male,Caucasian,65,19/9/00,"$160,307.91",15%,China,Chongqing,
+E73956,Sr. Manager,Operations,Research & Development,Male,Caucasian,36,20/11/10,"$144,547.29",15%,United States,New York,
+E49251,Sr. Manager,IT,Speciality Products,Male,Caucasian,44,26/1/08,"$92,477.75",5%,Canada,Vancouver,
+E33600,Director,Finance,Research & Development,Female,Asian,53,5/5/04,"$167,796.06",5%,Canada,Vancouver,
+E70236,Sr. Analyst,Marketing,Research & Development,Female,Caucasian,65,7/12/16,"$116,523.74",0%,India,Bangalore,
+E49210,Manager,Marketing,Speciality Products,Female,Caucasian,34,29/7/18,"$179,912.30",15%,United States,Seattle,
+E57049,Sr. Analyst,Marketing,Speciality Products,Male,Hispanic,39,9/2/14,"$41,133.72",0%,Germany,Munich,
+E47512,Computer Systems Manager,Operations,Speciality Products,Male,Asian,61,19/8/02,"$75,087.75",5%,UK,London,
+E94717,Sr. Manager,Sales,Corporate,Male,Caucasian,30,15/6/18,"$52,618.67",10%,China,Chongqing,
+E36318,Director,Operations,Speciality Products,Female,Asian,38,12/3/06,"$167,966.85",15%,Australia,Melbourne,
+E54396,Technical Architect,HR,Research & Development,Male,Asian,65,2/11/23,"$141,390.34",15%,Australia,Melbourne,15/12/23
+E61717,Sr. Manager,Sales,Research & Development,Female,Caucasian,65,14/12/02,"$144,861.62",10%,Germany,Munich,
+E58689,Technical Architect,Marketing,Manufacturing,Female,Black,61,14/2/23,"$163,792.88",20%,China,Chongqing,10/3/23
+E18285,Analyst,Marketing,Speciality Products,Female,Black,30,20/7/22,"$46,348.55",0%,China,Shanghai,22/11/23
+E40775,Director,HR,Corporate,Female,Hispanic,59,22/10/08,"$143,917.66",5%,India,Delhi,12/5/13
+E74139,Manager,Sales,Research & Development,Female,Asian,50,30/5/97,"$102,257.42",5%,Australia,Melbourne,3/8/04
+E99873,Account Representative,Operations,Speciality Products,Male,Hispanic,39,16/6/14,"$66,573.20",0%,Australia,Melbourne,23/10/19
+E37801,Sr. Manager,IT,Speciality Products,Male,Asian,58,24/5/02,"$68,728.78",20%,Canada,Toronto,
+E40539,Account Representative,Finance,Research & Development,Female,Asian,30,17/6/17,"$115,630.16",5%,United States,New York,15/9/21
+E56955,Computer Systems Manager,Operations,Speciality Products,Male,Asian,38,14/8/08,"$47,335.86",15%,Germany,Berlin,
+E72422,Analyst,Sales,Research & Development,Female,Asian,61,12/1/17,"$46,071.11",20%,China,Shanghai,
+E14082,Sr. Manager,HR,Corporate,Female,Black,53,9/10/10,"$139,736.18",15%,United States,New York,
+E29442,Technical Architect,Finance,Speciality Products,Female,Hispanic,60,8/1/00,"$114,277.96",15%,Germany,Munich,11/1/09
+E24996,Computer Systems Manager,HR,Corporate,Male,Hispanic,43,29/11/99,"$155,838.69",15%,India,Delhi,19/4/08
+E65936,Account Representative,Marketing,Speciality Products,Female,Asian,65,4/7/20,"$169,217.91",0%,United States,New York,2/2/25
+E22656,Account Representative,Finance,Research & Development,Female,Black,48,6/2/04,"$89,503.73",15%,Australia,Sydney,
+E88696,Sr. Analyst,Sales,Research & Development,Male,Asian,64,29/7/20,"$107,506.52",0%,China,Chongqing,
+E46512,Computer Systems Manager,HR,Research & Development,Female,Black,33,18/1/15,"$78,257.85",10%,China,Shanghai,3/5/22
+E28776,Manager,IT,Manufacturing,Male,Black,55,5/1/15,"$70,118.60",15%,India,Bangalore,21/10/21
+E50846,Account Representative,Operations,Research & Development,Male,Asian,32,23/6/07,"$145,621.02",0%,UK,London,8/12/14
+E96761,Manager,HR,Corporate,Female,Caucasian,35,13/11/99,"$145,692.04",0%,China,Shanghai,15/3/17
+E98895,Analyst,Operations,Speciality Products,Male,Asian,47,14/12/11,"$177,822.39",0%,United States,Seattle,
+E37686,Director,Sales,Speciality Products,Female,Black,22,2/4/98,"$109,633.95",15%,Canada,Toronto,
+E40161,Account Representative,IT,Corporate,Male,Hispanic,23,15/11/20,"$104,365.60",0%,Australia,Melbourne,
+E85156,Manager,Marketing,Corporate,Female,Black,47,5/10/96,"$42,919.92",10%,Canada,Vancouver,
+E57428,Technical Architect,HR,Research & Development,Male,Hispanic,59,16/6/24,"$96,062.97",0%,India,Bangalore,
+E39041,Account Representative,Finance,Research & Development,Male,Asian,44,21/11/98,"$89,153.96",5%,Canada,Toronto,2/2/04
+E35856,Director,Operations,Manufacturing,Male,Asian,62,4/7/16,"$109,176.38",20%,Australia,Melbourne,
+E83989,Account Representative,Marketing,Speciality Products,Male,Hispanic,26,8/8/00,"$105,648.95",10%,Australia,Melbourne,
+E56129,Technical Architect,Sales,Corporate,Female,Black,25,9/2/22,"$91,623.26",10%,United States,New York,
+E76462,Manager,HR,Research & Development,Female,Asian,42,24/4/18,"$124,700.82",20%,Canada,Toronto,
+E55015,Technical Architect,Operations,Manufacturing,Male,Asian,50,10/7/09,"$178,738.04",20%,Germany,Berlin,
+E47079,Manager,HR,Speciality Products,Male,Caucasian,26,14/6/15,"$86,156.71",20%,UK,Manchester,12/7/16
+E96057,Director,Sales,Research & Development,Male,Caucasian,41,1/4/08,"$175,477.51",15%,Canada,Toronto,
+E59372,Account Representative,Finance,Research & Development,Female,Caucasian,23,22/2/08,"$90,763.67",5%,Canada,Vancouver,
+E73736,Computer Systems Manager,Finance,Manufacturing,Male,Black,40,8/6/15,"$158,219.97",0%,Germany,Berlin,
+E91006,Director,Operations,Corporate,Male,Asian,33,31/1/11,"$156,388.31",20%,Australia,Sydney,
+E15726,Manager,Sales,Manufacturing,Female,Caucasian,50,28/2/13,"$72,760.41",5%,China,Shanghai,
+E35430,Account Representative,Marketing,Corporate,Female,Caucasian,46,18/9/03,"$110,406.94",15%,Canada,Toronto,
+E28140,Sr. Analyst,IT,Corporate,Female,Black,55,25/12/13,"$159,163.25",10%,United States,Seattle,6/3/14
+E77286,Director,HR,Research & Development,Male,Hispanic,44,22/4/18,"$170,266.07",15%,United States,Phoenix,
+E40903,Manager,IT,Speciality Products,Male,Black,42,6/9/19,"$170,315.63",10%,Australia,Sydney,26/8/20
+E47601,Analyst,Marketing,Manufacturing,Female,Hispanic,61,10/5/18,"$40,735.17",0%,United States,Chicago,3/12/22
+E29597,Manager,IT,Speciality Products,Male,Caucasian,29,15/9/20,"$46,684.92",15%,UK,Manchester,22/12/22
+E75513,Sr. Manager,Marketing,Manufacturing,Male,Caucasian,49,23/4/21,"$40,219.01",10%,Canada,Vancouver,13/1/24
+E97584,Technical Architect,Operations,Speciality Products,Male,Black,46,25/9/06,"$162,266.40",0%,UK,Manchester,
+E43246,Sr. Manager,Sales,Research & Development,Female,Asian,64,15/12/98,"$127,955.97",20%,UK,Manchester,9/12/08
+E56176,Account Representative,Marketing,Manufacturing,Female,Hispanic,62,14/12/09,"$65,518.92",5%,United States,Phoenix,22/8/12
+E36422,Sr. Manager,Finance,Research & Development,Female,Caucasian,54,6/8/10,"$95,751.37",20%,India,Bangalore,26/8/10
+E94790,Computer Systems Manager,Sales,Speciality Products,Male,Caucasian,39,23/9/19,"$57,426.50",10%,India,Bangalore,
+E60678,Account Representative,Finance,Corporate,Female,Caucasian,55,16/12/24,"$77,340.90",0%,UK,Manchester,23/2/25
+E88964,Director,Operations,Speciality Products,Female,Black,27,14/2/04,"$85,908.79",10%,China,Shanghai,
+E65851,Director,Marketing,Corporate,Female,Hispanic,24,11/3/12,"$141,754.02",10%,Germany,Munich,25/2/25
+E17518,Technical Architect,Marketing,Corporate,Female,Asian,23,28/3/01,"$59,989.13",20%,UK,Manchester,6/7/18
+E18812,Computer Systems Manager,Marketing,Speciality Products,Female,Hispanic,58,12/10/98,"$44,533.95",5%,UK,Manchester,
+E58760,Analyst,IT,Manufacturing,Female,Hispanic,42,11/10/24,"$130,938.50",5%,United States,New York,
+E75410,Manager,Operations,Research & Development,Female,Caucasian,50,7/6/16,"$70,039.86",20%,China,Chongqing,
+E74382,Computer Systems Manager,IT,Manufacturing,Male,Hispanic,33,24/4/05,"$165,815.06",15%,United States,Chicago,
+E18511,Sr. Analyst,Sales,Manufacturing,Male,Caucasian,54,18/10/23,"$71,393.83",5%,Australia,Sydney,25/2/25
+E74752,Sr. Manager,Sales,Speciality Products,Female,Asian,61,7/6/12,"$163,794.50",0%,China,Shanghai,
+E72739,Manager,HR,Research & Development,Male,Caucasian,63,18/11/15,"$50,383.10",15%,UK,Manchester,6/4/19
+E82260,Director,Finance,Corporate,Male,Black,55,11/5/00,"$61,422.17",5%,Canada,Vancouver,
+E39552,Account Representative,Operations,Speciality Products,Male,Caucasian,34,18/11/07,"$128,907.99",20%,China,Beijing,
+E90534,Technical Architect,Operations,Manufacturing,Male,Asian,64,7/2/21,"$127,427.09",20%,China,Chongqing,15/10/21
+E13718,Technical Architect,IT,Speciality Products,Male,Hispanic,61,6/7/13,"$129,458.77",15%,UK,Manchester,
+E49596,Analyst,Finance,Corporate,Female,Hispanic,26,26/8/21,"$136,405.90",5%,India,Bangalore,
+E36741,Account Representative,Operations,Manufacturing,Female,Caucasian,44,16/3/13,"$176,552.38",5%,Australia,Melbourne,
+E23917,Account Representative,Finance,Corporate,Male,Caucasian,50,7/3/95,"$74,708.64",0%,United States,Chicago,
+E90658,Manager,Finance,Manufacturing,Female,Caucasian,34,16/7/15,"$146,836.99",15%,Germany,Munich,
+E50441,Analyst,IT,Research & Development,Female,Hispanic,37,10/3/06,"$70,120.22",10%,United States,New York,24/10/22
+E88317,Analyst,Sales,Research & Development,Male,Hispanic,30,28/10/95,"$163,543.80",10%,Australia,Melbourne,
+E62505,Sr. Manager,Operations,Manufacturing,Female,Caucasian,26,19/12/98,"$94,088.84",15%,Australia,Melbourne,
+E91689,Technical Architect,Finance,Research & Development,Female,Caucasian,43,5/7/07,"$118,096.46",10%,Australia,Sydney,20/12/17
+E76731,Manager,Operations,Research & Development,Male,Black,30,22/4/03,"$139,902.86",15%,Germany,Munich,10/4/05
+E77568,Director,Sales,Speciality Products,Male,Hispanic,61,10/5/03,"$143,504.71",10%,Germany,Munich,
+E76809,Analyst,Marketing,Speciality Products,Female,Black,45,12/1/25,"$86,373.54",0%,India,Delhi,
+E92478,Sr. Manager,Operations,Corporate,Female,Asian,25,18/6/14,"$121,693.26",5%,Germany,Munich,20/10/15
+E99224,Computer Systems Manager,IT,Research & Development,Male,Black,50,27/1/98,"$83,916.95",5%,India,Delhi,22/12/22
+E75774,Analyst,Marketing,Research & Development,Male,Asian,57,11/9/11,"$85,506.93",15%,Germany,Munich,
+E32699,Analyst,Operations,Speciality Products,Female,Caucasian,61,4/12/22,"$107,785.21",5%,China,Chongqing,21/3/23
+E49008,Sr. Analyst,Marketing,Manufacturing,Female,Caucasian,52,14/1/21,"$88,832.44",10%,China,Beijing,
+E81197,Manager,HR,Speciality Products,Male,Caucasian,24,14/4/13,"$80,268.25",0%,China,Shanghai,
+E72793,Computer Systems Manager,Finance,Speciality Products,Female,Asian,28,20/3/21,"$126,194.78",20%,Canada,Toronto,1/10/21
+E79604,Computer Systems Manager,Marketing,Manufacturing,Male,Black,48,12/7/99,"$86,241.11",15%,United States,Seattle,22/12/21
+E82135,Director,HR,Corporate,Female,Asian,40,1/5/11,"$84,963.48",0%,Australia,Sydney,
+E40437,Sr. Manager,Finance,Corporate,Male,Black,47,12/11/13,"$150,314.49",5%,UK,Manchester,
+E11214,Sr. Analyst,Operations,Research & Development,Female,Caucasian,51,11/10/00,"$178,473.93",20%,Germany,Munich,
+E27589,Analyst,Sales,Manufacturing,Male,Caucasian,32,6/3/04,"$142,356.69",10%,UK,London,17/2/22
+E54185,Sr. Analyst,Operations,Manufacturing,Male,Hispanic,49,4/11/24,"$112,139.29",0%,India,Delhi,25/1/25
+E28430,Analyst,Sales,Manufacturing,Male,Caucasian,46,14/5/02,"$72,972.98",10%,China,Shanghai,
+E85088,Sr. Manager,Sales,Speciality Products,Male,Black,64,5/7/13,"$56,551.48",10%,Canada,Vancouver,
+E50760,Technical Architect,Marketing,Speciality Products,Female,Asian,36,9/11/20,"$174,030.48",15%,Canada,Vancouver,
+E89395,Account Representative,HR,Corporate,Male,Asian,65,30/12/19,"$145,663.54",0%,Germany,Munich,
+E57419,Technical Architect,Operations,Research & Development,Male,Asian,58,19/8/18,"$115,132.42",5%,China,Chongqing,
+E99167,Computer Systems Manager,Marketing,Corporate,Male,Hispanic,25,1/1/02,"$103,480.52",20%,India,Bangalore,
+E83242,Analyst,Marketing,Speciality Products,Male,Hispanic,38,2/6/19,"$154,303.45",5%,Germany,Berlin,25/1/22
+E55158,Technical Architect,Operations,Research & Development,Male,Hispanic,24,25/9/08,"$80,192.70",5%,Australia,Sydney,
+E94656,Manager,Sales,Corporate,Female,Hispanic,46,5/1/18,"$51,235.00",20%,Canada,Vancouver,17/7/23
+E80419,Manager,Operations,Manufacturing,Male,Black,23,12/11/07,"$176,988.70",15%,UK,Manchester,
+E40102,Computer Systems Manager,HR,Speciality Products,Male,Caucasian,34,24/1/10,"$171,237.45",0%,United States,Phoenix,
+E12050,Computer Systems Manager,Finance,Research & Development,Male,Black,50,8/10/12,"$123,689.89",0%,Canada,Toronto,
+E40715,Computer Systems Manager,IT,Manufacturing,Female,Asian,58,9/7/10,"$84,646.52",20%,Australia,Melbourne,29/7/12
+E28777,Computer Systems Manager,HR,Speciality Products,Female,Black,57,5/8/03,"$172,792.84",5%,UK,Manchester,
+E16145,Account Representative,Marketing,Corporate,Female,Hispanic,48,21/10/02,"$60,890.47",15%,Canada,Vancouver,24/12/04
+E39536,Sr. Analyst,Marketing,Manufacturing,Female,Black,57,30/8/06,"$97,774.85",15%,Germany,Berlin,
+E43422,Computer Systems Manager,Sales,Research & Development,Female,Caucasian,27,16/11/95,"$114,988.98",5%,United States,Chicago,
+E89294,Sr. Manager,IT,Manufacturing,Male,Hispanic,35,6/3/15,"$161,726.34",10%,China,Beijing,6/8/24
+E34906,Technical Architect,Marketing,Corporate,Male,Asian,47,27/12/02,"$168,117.70",20%,China,Shanghai,
+E79946,Account Representative,Sales,Speciality Products,Female,Hispanic,51,7/3/15,"$53,805.15",15%,Australia,Melbourne,
+E58589,Account Representative,HR,Research & Development,Male,Asian,23,26/8/02,"$76,508.38",20%,Germany,Munich,23/11/02
+E35715,Account Representative,Finance,Corporate,Male,Hispanic,57,29/7/97,"$131,645.12",10%,China,Shanghai,
+E94108,Analyst,HR,Manufacturing,Female,Asian,30,30/3/19,"$140,843.89",15%,Canada,Toronto,
+E19742,Sr. Manager,IT,Corporate,Male,Asian,26,19/8/16,"$139,003.74",0%,Canada,Vancouver,
+E90980,Analyst,Marketing,Corporate,Male,Black,56,28/2/97,"$117,230.10",0%,United States,Miami,
+E80220,Sr. Analyst,IT,Corporate,Male,Black,28,13/12/02,"$113,413.96",5%,Canada,Vancouver,
+E45038,Manager,IT,Speciality Products,Female,Hispanic,58,14/6/97,"$74,049.11",5%,China,Chongqing,
+E20566,Sr. Manager,IT,Corporate,Female,Hispanic,57,24/3/96,"$106,640.71",0%,UK,London,21/6/07
+E66873,Account Representative,Operations,Research & Development,Male,Asian,35,27/7/97,"$166,178.21",20%,India,Bangalore,23/1/15
+E19744,Sr. Analyst,Operations,Research & Development,Male,Caucasian,23,4/4/03,"$174,605.69",20%,Canada,Vancouver,
+E49226,Director,Operations,Manufacturing,Female,Caucasian,46,19/8/04,"$145,785.30",5%,Australia,Sydney,
+E55332,Sr. Manager,IT,Corporate,Male,Black,43,2/12/17,"$124,723.62",20%,Germany,Munich,
+E52778,Sr. Manager,Marketing,Speciality Products,Female,Hispanic,36,4/9/11,"$89,813.57",15%,India,Mumbai,
+E96595,Manager,IT,Speciality Products,Male,Black,27,13/6/02,"$77,516.08",15%,UK,London,
+E51507,Account Representative,IT,Research & Development,Male,Caucasian,50,4/7/13,"$90,388.45",10%,United States,Seattle,4/10/15
+E66489,Analyst,Operations,Corporate,Male,Black,27,9/10/19,"$89,548.00",0%,Germany,Munich,
+E11617,Sr. Analyst,HR,Corporate,Male,Asian,58,3/8/14,"$112,954.63",15%,Canada,Toronto,22/5/24
+E45180,Analyst,Finance,Research & Development,Male,Hispanic,39,30/3/11,"$98,954.33",15%,Australia,Sydney,
+E42321,Analyst,Operations,Manufacturing,Female,Black,30,5/6/03,"$82,652.12",15%,China,Chongqing,
+E53193,Analyst,Sales,Corporate,Male,Caucasian,42,8/11/21,"$124,449.58",5%,India,Bangalore,12/11/23
+E62198,Account Representative,Sales,Corporate,Male,Caucasian,46,20/8/22,"$79,242.02",15%,China,Beijing,
+E36188,Director,Marketing,Research & Development,Female,Asian,50,3/1/09,"$151,675.97",0%,Australia,Melbourne,
+E28242,Sr. Analyst,Finance,Speciality Products,Male,Hispanic,46,21/8/01,"$50,355.12",20%,India,Delhi,
+E76402,Manager,Operations,Research & Development,Female,Black,28,15/5/98,"$147,653.57",10%,Canada,Toronto,
+E94545,Manager,Sales,Corporate,Male,Black,28,16/6/98,"$76,223.37",20%,UK,London,
+E61266,Analyst,Marketing,Manufacturing,Female,Black,52,31/7/17,"$54,636.91",15%,United States,New York,
+E28569,Account Representative,Sales,Speciality Products,Female,Asian,55,28/10/09,"$107,609.64",15%,United States,Phoenix,
+E69303,Account Representative,IT,Speciality Products,Male,Black,23,20/3/07,"$158,885.20",0%,UK,London,
+E41970,Director,Operations,Manufacturing,Female,Hispanic,51,28/7/09,"$72,459.78",15%,UK,London,25/7/16
+E96154,Manager,HR,Research & Development,Male,Hispanic,59,18/1/11,"$100,137.40",0%,UK,London,14/6/23
+E18200,Technical Architect,Operations,Manufacturing,Female,Caucasian,34,1/1/97,"$104,057.06",10%,UK,Manchester,
+E93769,Account Representative,Operations,Corporate,Female,Black,44,26/1/18,"$89,277.89",15%,Germany,Berlin,
+E48986,Technical Architect,Marketing,Manufacturing,Female,Black,37,23/5/17,"$82,753.20",5%,China,Chongqing,20/11/22
+E60916,Manager,Operations,Manufacturing,Female,Hispanic,33,5/7/98,"$108,133.83",20%,UK,London,
+E74178,Sr. Analyst,Finance,Manufacturing,Female,Hispanic,61,22/3/97,"$47,505.58",10%,United States,Phoenix,2/12/10
+E60324,Analyst,HR,Corporate,Female,Hispanic,53,8/12/19,"$63,415.49",20%,United States,Seattle,27/10/22
+E46025,Computer Systems Manager,Operations,Speciality Products,Male,Hispanic,58,26/5/22,"$143,952.56",15%,Germany,Berlin,
+E45112,Account Representative,Operations,Research & Development,Female,Asian,49,23/6/24,"$54,338.30",5%,China,Beijing,
+E55688,Technical Architect,HR,Research & Development,Male,Asian,59,16/11/98,"$136,478.70",20%,UK,Manchester,3/5/07
+E28249,Computer Systems Manager,Finance,Research & Development,Female,Caucasian,60,4/9/01,"$115,427.60",10%,UK,Manchester,23/2/08
+E45041,Technical Architect,Finance,Corporate,Male,Caucasian,63,28/5/13,"$57,764.34",5%,Canada,Toronto,
+E42447,Manager,HR,Manufacturing,Female,Hispanic,46,4/6/10,"$103,278.84",0%,India,Delhi,
+E58374,Analyst,HR,Speciality Products,Male,Black,51,6/12/99,"$128,877.68",10%,Australia,Sydney,
+E62129,Computer Systems Manager,HR,Manufacturing,Female,Caucasian,42,6/7/09,"$155,968.11",10%,Germany,Berlin,
+E73614,Account Representative,Marketing,Research & Development,Male,Black,62,27/5/01,"$149,744.57",15%,United States,New York,
+E30707,Analyst,HR,Research & Development,Female,Asian,30,20/8/04,"$163,500.69",10%,Canada,Vancouver,17/5/20
+E57242,Sr. Analyst,IT,Speciality Products,Male,Black,47,29/8/03,"$127,584.60",5%,India,Delhi,22/3/06
+E22475,Sr. Manager,Finance,Corporate,Male,Asian,59,28/3/10,"$71,666.72",15%,United States,New York,
+E25806,Manager,Marketing,Manufacturing,Female,Black,36,26/8/22,"$93,629.79",0%,United States,Chicago,
+E49223,Director,HR,Manufacturing,Male,Black,55,19/6/24,"$118,860.77",20%,UK,London,
+E37925,Director,HR,Corporate,Male,Black,28,13/4/24,"$59,601.84",0%,Germany,Munich,
+E66280,Account Representative,Finance,Manufacturing,Female,Black,37,19/11/13,"$117,475.53",20%,UK,Manchester,
+E13515,Sr. Analyst,Finance,Manufacturing,Female,Caucasian,63,28/6/98,"$47,639.68",5%,India,Bangalore,17/3/00
+E75481,Technical Architect,Operations,Research & Development,Female,Caucasian,30,7/5/17,"$94,157.35",20%,India,Bangalore,
+E32645,Analyst,IT,Research & Development,Male,Black,38,21/7/13,"$70,204.01",0%,Australia,Melbourne,
+E92388,Manager,HR,Corporate,Male,Asian,39,9/8/23,"$51,703.59",0%,Germany,Berlin,
+E30365,Account Representative,HR,Research & Development,Female,Hispanic,37,30/8/95,"$48,106.83",0%,India,Mumbai,
+E89800,Sr. Manager,Sales,Manufacturing,Male,Black,30,2/5/98,"$138,209.95",5%,India,Bangalore,
+E43980,Director,Sales,Manufacturing,Female,Black,23,18/10/20,"$86,901.54",15%,China,Chongqing,22/10/22
+E85582,Technical Architect,HR,Corporate,Female,Black,53,25/10/00,"$160,310.37",5%,China,Beijing,23/8/14
+E23487,Technical Architect,Finance,Research & Development,Male,Black,37,7/9/11,"$46,437.41",10%,India,Mumbai,15/11/19
+E14635,Manager,Finance,Speciality Products,Male,Hispanic,42,7/6/02,"$77,976.11",0%,Germany,Munich,28/1/16
+E98254,Sr. Manager,Finance,Manufacturing,Male,Hispanic,26,25/2/97,"$162,778.77",10%,Australia,Melbourne,
+E82494,Analyst,IT,Speciality Products,Male,Caucasian,58,5/10/00,"$149,831.01",20%,Canada,Vancouver,
+E74665,Computer Systems Manager,Marketing,Manufacturing,Male,Black,48,20/1/08,"$43,347.44",20%,China,Chongqing,
+E11257,Account Representative,IT,Corporate,Female,Black,35,26/3/95,"$114,174.03",5%,India,Bangalore,
+E28661,Sr. Analyst,IT,Research & Development,Male,Hispanic,45,10/6/08,"$104,184.12",0%,Germany,Berlin,
+E93521,Manager,IT,Research & Development,Female,Asian,37,7/3/04,"$80,834.64",10%,Australia,Melbourne,
+E52762,Account Representative,HR,Speciality Products,Male,Black,34,2/11/21,"$59,055.66",20%,United States,Seattle,9/10/23
+E68925,Analyst,Sales,Corporate,Male,Caucasian,35,11/11/04,"$103,268.39",15%,China,Beijing,3/4/19
+E99922,Sr. Analyst,Marketing,Research & Development,Male,Caucasian,31,10/11/18,"$52,769.81",5%,China,Shanghai,
+E98759,Sr. Analyst,Sales,Manufacturing,Male,Hispanic,50,6/1/20,"$117,833.53",20%,Canada,Toronto,
+E28322,Technical Architect,IT,Research & Development,Male,Asian,34,24/10/21,"$155,314.28",10%,UK,London,
+E43924,Technical Architect,IT,Research & Development,Male,Hispanic,30,25/1/14,"$52,877.01",10%,United States,New York,
+E16637,Director,Operations,Corporate,Female,Hispanic,23,5/9/17,"$93,582.12",15%,Canada,Vancouver,16/10/23
+E34530,Sr. Analyst,Sales,Corporate,Male,Black,61,20/9/11,"$126,684.72",5%,UK,Manchester,
+E82179,Analyst,IT,Research & Development,Female,Hispanic,30,4/6/00,"$98,692.87",20%,Canada,Toronto,
+E57069,Analyst,Operations,Corporate,Female,Caucasian,46,14/8/01,"$77,861.00",0%,China,Chongqing,18/9/11
+E46822,Sr. Manager,HR,Speciality Products,Male,Asian,28,26/7/02,"$74,699.99",5%,China,Chongqing,
+E17328,Computer Systems Manager,Operations,Corporate,Female,Asian,33,23/2/97,"$73,117.16",10%,Australia,Melbourne,
+E13697,Account Representative,Operations,Manufacturing,Male,Hispanic,56,12/11/14,"$83,267.43",15%,United States,New York,2/2/24
+E88861,Computer Systems Manager,IT,Corporate,Male,Caucasian,61,26/3/97,"$68,205.01",5%,China,Chongqing,6/9/22
+E52413,Sr. Manager,IT,Manufacturing,Male,Black,55,30/10/05,"$160,493.73",0%,China,Chongqing,
+E61851,Technical Architect,Sales,Speciality Products,Female,Asian,32,7/2/97,"$142,529.28",15%,Australia,Melbourne,
+E32833,Account Representative,Finance,Manufacturing,Female,Caucasian,40,12/11/96,"$57,828.77",0%,UK,Manchester,
+E84381,Sr. Manager,Finance,Speciality Products,Male,Black,53,13/1/15,"$59,690.07",0%,Canada,Vancouver,
+E32005,Technical Architect,Marketing,Speciality Products,Female,Black,38,20/5/11,"$69,355.80",0%,China,Shanghai,
+E10167,Sr. Manager,HR,Corporate,Female,Asian,48,8/4/12,"$109,031.48",15%,China,Chongqing,
+E72847,Computer Systems Manager,Finance,Corporate,Male,Black,40,4/3/24,"$42,810.92",10%,United States,New York,
+E59212,Director,Marketing,Research & Development,Male,Caucasian,60,25/3/13,"$177,938.65",15%,UK,London,
+E95673,Director,Operations,Corporate,Male,Black,28,7/7/00,"$86,353.24",5%,India,Delhi,
+E80795,Sr. Analyst,Marketing,Speciality Products,Female,Asian,28,3/2/97,"$46,948.96",20%,Germany,Munich,16/5/14
+E57294,Sr. Manager,HR,Research & Development,Female,Hispanic,34,19/11/97,"$53,578.17",5%,Canada,Vancouver,
+E72071,Technical Architect,Sales,Corporate,Female,Hispanic,64,16/2/24,"$77,100.62",20%,India,Mumbai,
+E59996,Account Representative,Finance,Corporate,Male,Caucasian,50,25/6/01,"$105,108.11",5%,Australia,Melbourne,
+E29808,Technical Architect,IT,Speciality Products,Female,Asian,57,28/6/97,"$48,537.72",15%,Australia,Melbourne,
+E72236,Computer Systems Manager,HR,Speciality Products,Male,Hispanic,24,28/5/15,"$110,294.21",20%,Australia,Sydney,23/7/16
+E68856,Director,Finance,Manufacturing,Male,Asian,24,18/2/18,"$99,272.49",15%,Canada,Toronto,
+E43801,Account Representative,Marketing,Research & Development,Male,Hispanic,57,25/6/24,"$95,629.70",10%,Australia,Melbourne,
+E11620,Manager,IT,Corporate,Male,Asian,58,1/3/03,"$122,310.78",0%,United States,Miami,
+E47498,Account Representative,HR,Speciality Products,Female,Hispanic,58,23/11/08,"$125,254.70",0%,Canada,Vancouver,
+E91034,Manager,IT,Corporate,Female,Asian,25,28/3/99,"$144,404.97",10%,China,Beijing,
+E49722,Sr. Analyst,Sales,Corporate,Male,Asian,30,17/7/14,"$82,067.26",15%,Australia,Melbourne,23/9/18
+E64627,Technical Architect,Finance,Corporate,Male,Hispanic,53,9/11/14,"$146,329.06",10%,Australia,Sydney,
+E30836,Technical Architect,Sales,Corporate,Male,Black,33,22/5/15,"$66,986.88",5%,Australia,Sydney,23/1/16
+E69827,Sr. Manager,Sales,Manufacturing,Female,Caucasian,51,26/3/16,"$110,717.69",0%,UK,London,17/8/17
+E74066,Analyst,Finance,Corporate,Female,Caucasian,32,3/6/09,"$157,271.53",10%,UK,London,8/8/20
+E60667,Sr. Manager,Finance,Manufacturing,Male,Asian,65,7/1/15,"$68,942.34",15%,Germany,Berlin,
+E99417,Sr. Manager,HR,Manufacturing,Male,Black,36,23/5/14,"$75,334.66",10%,UK,Manchester,
+E59345,Account Representative,HR,Speciality Products,Male,Hispanic,41,11/12/12,"$134,807.46",20%,India,Delhi,29/4/18
+E77045,Account Representative,Operations,Speciality Products,Female,Black,52,12/1/04,"$48,937.19",10%,UK,Manchester,
+E44229,Sr. Analyst,Finance,Manufacturing,Male,Black,60,9/2/02,"$96,573.78",10%,UK,London,
+E95904,Analyst,Sales,Speciality Products,Female,Hispanic,46,12/12/17,"$143,142.49",20%,UK,London,
+E39145,Analyst,Marketing,Speciality Products,Female,Asian,64,12/7/19,"$162,709.27",5%,China,Beijing,
+E43902,Director,Marketing,Speciality Products,Male,Asian,44,6/11/05,"$71,265.91",10%,India,Bangalore,
+E86751,Sr. Analyst,HR,Research & Development,Female,Black,62,13/4/03,"$121,700.45",20%,United States,Phoenix,
+E75598,Technical Architect,Marketing,Corporate,Female,Hispanic,25,12/3/04,"$161,918.88",5%,Canada,Toronto,
+E84632,Analyst,Finance,Speciality Products,Male,Black,53,16/8/08,"$86,568.12",5%,China,Chongqing,7/11/10
+E69251,Sr. Analyst,Finance,Manufacturing,Male,Hispanic,27,5/1/18,"$58,116.83",15%,UK,Manchester,
+E72573,Manager,IT,Research & Development,Male,Caucasian,22,14/2/17,"$164,880.89",20%,Canada,Toronto,
+E92141,Computer Systems Manager,Finance,Speciality Products,Female,Asian,28,14/5/05,"$93,697.07",20%,China,Beijing,3/12/20
+E15992,Sr. Analyst,Sales,Corporate,Female,Hispanic,65,1/12/05,"$179,366.14",10%,India,Bangalore,
+E31611,Manager,IT,Manufacturing,Male,Asian,35,27/9/20,"$142,770.73",20%,Germany,Berlin,10/5/21
+E95267,Sr. Manager,HR,Speciality Products,Male,Black,64,23/6/95,"$55,135.88",0%,United States,New York,
+E59840,Technical Architect,Operations,Speciality Products,Female,Asian,35,2/10/10,"$137,326.88",0%,China,Shanghai,
+E96832,Sr. Analyst,Operations,Manufacturing,Female,Black,54,17/4/16,"$140,627.27",0%,China,Beijing,
+E75239,Computer Systems Manager,Operations,Manufacturing,Female,Asian,44,25/4/14,"$138,481.15",10%,Canada,Toronto,
+E37222,Analyst,Sales,Manufacturing,Male,Black,64,24/7/98,"$52,460.40",0%,Australia,Melbourne,19/1/01
+E21807,Technical Architect,Marketing,Research & Development,Female,Asian,51,14/6/13,"$178,413.23",10%,China,Shanghai,28/1/17
+E32898,Sr. Manager,Sales,Speciality Products,Female,Hispanic,29,15/5/12,"$53,299.79",0%,United States,Seattle,
+E32349,Account Representative,Sales,Corporate,Female,Black,45,7/3/04,"$154,095.00",5%,United States,Phoenix,
+E69839,Sr. Analyst,HR,Corporate,Female,Asian,29,1/9/99,"$58,551.62",0%,Australia,Sydney,17/7/11
+E87430,Analyst,Operations,Corporate,Male,Hispanic,44,16/2/25,"$125,590.18",5%,India,Bangalore,16/2/25
+E63907,Analyst,IT,Research & Development,Female,Caucasian,22,28/1/25,"$138,639.54",20%,Australia,Sydney,
+E97797,Account Representative,Operations,Research & Development,Female,Asian,52,21/6/03,"$88,404.93",15%,Canada,Toronto,16/1/16
+E30568,Analyst,HR,Manufacturing,Male,Hispanic,42,8/11/04,"$73,724.85",10%,United States,Miami,22/3/10
+E94320,Manager,HR,Manufacturing,Male,Hispanic,50,25/1/10,"$152,176.58",15%,United States,Phoenix,
+E25559,Analyst,Marketing,Research & Development,Male,Hispanic,48,12/7/23,"$45,016.47",20%,United States,New York,
+E91142,Sr. Analyst,Operations,Manufacturing,Female,Caucasian,45,22/8/13,"$155,543.54",5%,Australia,Melbourne,
+E91232,Analyst,Marketing,Speciality Products,Female,Black,28,5/2/19,"$146,304.79",5%,United States,Chicago,
+E93055,Sr. Analyst,Operations,Speciality Products,Male,Black,32,14/6/05,"$108,939.10",15%,United States,Chicago,
+E34581,Technical Architect,HR,Manufacturing,Female,Asian,43,21/12/15,"$55,087.20",15%,United States,Miami,19/12/24
+E69048,Analyst,Marketing,Manufacturing,Female,Black,55,5/6/95,"$143,069.95",20%,India,Delhi,
+E76628,Director,Marketing,Manufacturing,Male,Black,46,18/11/17,"$132,053.05",20%,China,Chongqing,
+E64875,Computer Systems Manager,Sales,Corporate,Female,Caucasian,50,17/12/22,"$152,671.56",5%,India,Delhi,
+E77147,Sr. Analyst,Marketing,Speciality Products,Male,Asian,35,11/1/14,"$127,383.46",10%,UK,Manchester,
+E27389,Director,Operations,Speciality Products,Male,Caucasian,57,6/5/05,"$107,251.79",20%,UK,Manchester,
+E79979,Sr. Analyst,HR,Research & Development,Male,Black,46,24/9/17,"$60,345.74",0%,Canada,Vancouver,
+E31094,Sr. Analyst,Marketing,Speciality Products,Male,Black,40,7/9/98,"$68,560.13",20%,United States,Chicago,
+E23432,Computer Systems Manager,Marketing,Corporate,Male,Caucasian,64,13/1/25,"$46,577.18",15%,India,Bangalore,
+E99803,Account Representative,Operations,Research & Development,Male,Caucasian,34,23/9/99,"$126,878.64",15%,Australia,Sydney,
+E94886,Account Representative,Operations,Manufacturing,Male,Caucasian,50,27/2/04,"$64,839.63",0%,Canada,Toronto,
+E25643,Manager,IT,Corporate,Female,Caucasian,30,1/2/99,"$62,530.04",10%,United States,Chicago,
+E30290,Sr. Manager,Finance,Speciality Products,Male,Caucasian,53,20/10/98,"$150,587.15",20%,China,Beijing,
+E51662,Computer Systems Manager,Finance,Research & Development,Male,Hispanic,56,2/6/20,"$115,185.03",0%,China,Beijing,
+E96944,Account Representative,Sales,Speciality Products,Female,Asian,61,25/12/13,"$114,269.85",20%,Australia,Sydney,16/8/16
+E55351,Analyst,Finance,Manufacturing,Male,Caucasian,46,4/6/04,"$168,230.54",0%,India,Bangalore,
+E47070,Sr. Manager,Operations,Speciality Products,Female,Hispanic,24,29/9/04,"$81,500.76",5%,China,Chongqing,29/11/11
+E22577,Director,Operations,Research & Development,Male,Asian,64,30/7/19,"$128,132.03",5%,Australia,Melbourne,
+E36945,Manager,Marketing,Research & Development,Male,Black,51,29/10/06,"$140,361.56",0%,United States,New York,2/10/13
+E43018,Technical Architect,Operations,Manufacturing,Female,Hispanic,46,20/7/18,"$103,157.59",15%,India,Bangalore,11/12/23
+E98250,Technical Architect,Operations,Research & Development,Male,Black,26,6/3/24,"$90,078.02",20%,United States,Chicago,
+E49498,Technical Architect,Sales,Corporate,Female,Hispanic,64,21/2/04,"$44,314.68",5%,Germany,Berlin,3/5/21
+E61248,Sr. Analyst,Marketing,Manufacturing,Female,Caucasian,22,13/10/11,"$117,493.39",20%,Canada,Toronto,20/1/16
+E85067,Manager,Operations,Research & Development,Female,Asian,44,13/12/23,"$69,643.17",20%,Canada,Toronto,21/1/24
+E90856,Sr. Analyst,Finance,Research & Development,Male,Black,57,20/4/98,"$104,577.13",20%,United States,Chicago,
+E42858,Technical Architect,Finance,Corporate,Female,Caucasian,30,27/9/16,"$133,981.38",5%,United States,Chicago,
+E35362,Account Representative,HR,Corporate,Female,Caucasian,59,28/7/09,"$61,335.29",20%,China,Shanghai,
+E32103,Sr. Manager,Sales,Manufacturing,Male,Hispanic,39,18/5/23,"$157,615.41",5%,UK,Manchester,
+E70666,Analyst,Sales,Speciality Products,Female,Black,33,28/7/04,"$130,377.22",0%,Australia,Melbourne,
+E28350,Computer Systems Manager,Sales,Research & Development,Male,Black,54,28/8/96,"$128,427.71",20%,Germany,Munich,
+E37886,Sr. Manager,Operations,Speciality Products,Female,Asian,45,13/4/95,"$94,949.77",20%,UK,Manchester,18/8/06
+E75683,Technical Architect,HR,Speciality Products,Male,Asian,61,25/5/21,"$135,782.63",20%,Canada,Vancouver,14/12/21
+E84233,Director,Marketing,Corporate,Female,Black,36,1/11/16,"$146,606.13",5%,United States,Chicago,
+E15610,Computer Systems Manager,Operations,Speciality Products,Female,Hispanic,51,27/1/04,"$163,417.28",0%,UK,Manchester,27/7/09
+E78337,Sr. Analyst,Marketing,Speciality Products,Male,Hispanic,63,18/5/20,"$92,992.59",20%,UK,London,
+E59326,Computer Systems Manager,Operations,Corporate,Female,Caucasian,53,11/3/10,"$150,972.04",20%,United States,Miami,
+E67658,Director,Finance,Research & Development,Female,Asian,31,6/12/13,"$66,166.79",10%,Germany,Berlin,
+E64344,Account Representative,Marketing,Research & Development,Female,Hispanic,52,3/3/19,"$69,498.55",5%,UK,Manchester,21/10/22
+E15655,Director,Operations,Manufacturing,Male,Black,58,30/3/14,"$60,561.11",5%,China,Beijing,
+E63143,Sr. Manager,Marketing,Speciality Products,Male,Asian,50,28/6/95,"$124,913.63",15%,Australia,Melbourne,18/4/99
+E63840,Director,Operations,Manufacturing,Female,Asian,65,20/9/97,"$87,973.98",15%,Germany,Berlin,25/3/21
+E60523,Director,IT,Research & Development,Male,Hispanic,31,25/3/00,"$124,771.54",5%,India,Delhi,
+E79655,Technical Architect,IT,Corporate,Male,Black,65,21/9/13,"$130,892.44",20%,India,Bangalore,
+E79444,Manager,Finance,Corporate,Female,Caucasian,59,20/5/96,"$152,646.95",20%,United States,Phoenix,11/10/24
+E72539,Computer Systems Manager,IT,Speciality Products,Female,Caucasian,34,21/9/07,"$40,765.72",0%,Germany,Berlin,
+E59155,Computer Systems Manager,Marketing,Speciality Products,Female,Caucasian,28,24/12/14,"$61,669.00",20%,China,Shanghai,
+E65517,Account Representative,Operations,Speciality Products,Female,Asian,48,16/12/13,"$117,294.69",20%,India,Mumbai,
+E82733,Analyst,Sales,Speciality Products,Female,Hispanic,30,13/3/00,"$159,699.85",0%,UK,London,
+E31206,Technical Architect,Finance,Corporate,Female,Black,32,13/10/09,"$94,474.52",0%,Australia,Sydney,
+E71822,Manager,IT,Research & Development,Female,Asian,45,30/6/99,"$51,205.56",0%,UK,Manchester,
+E62513,Sr. Analyst,Marketing,Research & Development,Male,Hispanic,50,31/7/96,"$41,499.46",20%,China,Beijing,25/1/07
+E88579,Computer Systems Manager,Operations,Manufacturing,Male,Caucasian,37,26/7/07,"$131,702.68",5%,United States,Chicago,
+E56285,Manager,HR,Manufacturing,Male,Black,27,31/3/22,"$116,942.97",20%,Germany,Munich,
+E46242,Computer Systems Manager,Operations,Manufacturing,Female,Hispanic,58,11/6/24,"$40,651.20",5%,India,Delhi,26/6/24
+E19487,Sr. Analyst,Sales,Research & Development,Female,Caucasian,50,2/5/07,"$175,247.76",20%,India,Mumbai,
+E70142,Analyst,Operations,Research & Development,Female,Black,38,22/4/02,"$49,457.60",5%,UK,London,
+E64057,Account Representative,Operations,Research & Development,Female,Asian,40,14/5/18,"$53,021.32",10%,United States,Miami,
+E72463,Account Representative,Sales,Manufacturing,Female,Asian,65,26/8/03,"$170,235.74",5%,India,Delhi,23/2/07
+E41726,Sr. Analyst,Finance,Manufacturing,Male,Asian,61,12/3/07,"$89,843.83",0%,United States,New York,
+E96956,Analyst,Operations,Research & Development,Male,Hispanic,45,13/9/21,"$126,893.45",15%,Germany,Munich,
+E76995,Sr. Analyst,HR,Manufacturing,Male,Black,55,17/3/14,"$151,897.79",15%,Germany,Berlin,
+E61605,Director,HR,Research & Development,Female,Caucasian,22,2/12/24,"$41,654.80",5%,India,Delhi,10/1/25
+E57395,Sr. Analyst,Finance,Speciality Products,Male,Caucasian,52,11/4/16,"$174,193.75",10%,China,Beijing,
+E37594,Manager,Marketing,Speciality Products,Female,Hispanic,39,29/8/20,"$103,102.06",20%,Canada,Toronto,
+E45382,Computer Systems Manager,Operations,Corporate,Female,Asian,31,1/6/00,"$152,005.24",5%,India,Mumbai,21/6/08
+E75483,Director,Marketing,Speciality Products,Female,Caucasian,38,29/7/24,"$118,699.38",20%,United States,Phoenix,30/9/24
+E31409,Sr. Manager,Finance,Speciality Products,Female,Black,50,17/5/22,"$144,243.05",10%,China,Shanghai,
+E43779,Account Representative,IT,Corporate,Male,Caucasian,65,29/9/22,"$174,836.32",5%,Germany,Berlin,
+E47304,Account Representative,Sales,Corporate,Female,Black,46,8/3/01,"$125,912.93",15%,UK,London,
+E93962,Account Representative,HR,Corporate,Male,Black,32,23/2/25,"$88,107.57",10%,China,Chongqing,25/2/25
+E45058,Manager,Sales,Corporate,Female,Hispanic,48,2/1/96,"$63,424.53",0%,Canada,Toronto,
+E20494,Computer Systems Manager,Finance,Corporate,Male,Black,26,6/4/01,"$171,151.11",15%,Germany,Berlin,25/7/12
+E62037,Technical Architect,IT,Speciality Products,Male,Black,63,12/10/21,"$170,422.54",15%,China,Beijing,13/7/23
+E47247,Analyst,Marketing,Manufacturing,Male,Asian,23,15/6/22,"$44,921.70",10%,Australia,Melbourne,
+E71235,Sr. Analyst,Operations,Corporate,Male,Asian,59,14/12/17,"$123,661.79",20%,India,Delhi,
+E79964,Sr. Analyst,Sales,Corporate,Male,Black,50,23/7/24,"$83,101.55",15%,China,Beijing,
+E10012,Director,Sales,Speciality Products,Female,Black,53,2/3/20,"$172,574.05",15%,China,Beijing,
+E48393,Computer Systems Manager,IT,Speciality Products,Male,Hispanic,57,29/9/22,"$101,194.89",5%,Canada,Vancouver,
+E38913,Sr. Analyst,IT,Corporate,Male,Caucasian,40,9/8/03,"$130,783.99",20%,Australia,Melbourne,
+E18973,Director,Finance,Speciality Products,Male,Hispanic,61,27/3/04,"$103,387.41",20%,India,Mumbai,
+E29942,Sr. Manager,Operations,Research & Development,Male,Black,40,29/7/00,"$77,687.32",15%,UK,London,8/6/24
+E29750,Sr. Manager,HR,Manufacturing,Female,Hispanic,41,2/11/98,"$150,001.55",15%,China,Shanghai,
+E14159,Account Representative,IT,Manufacturing,Male,Caucasian,47,5/3/08,"$49,993.86",15%,Canada,Toronto,
+E42778,Manager,IT,Research & Development,Male,Hispanic,50,31/10/24,"$74,602.71",0%,Canada,Vancouver,
+E22315,Computer Systems Manager,HR,Corporate,Female,Caucasian,32,23/6/96,"$128,083.00",0%,UK,London,28/6/12
+E93692,Sr. Analyst,Finance,Speciality Products,Male,Asian,29,23/9/02,"$73,035.22",15%,China,Beijing,8/7/09
+E46188,Technical Architect,HR,Manufacturing,Male,Black,59,11/12/22,"$149,686.53",15%,UK,London,
+E21728,Computer Systems Manager,Finance,Corporate,Male,Caucasian,62,27/10/10,"$48,407.33",10%,UK,London,
+E24076,Director,HR,Manufacturing,Female,Caucasian,50,21/1/07,"$142,646.44",0%,UK,Manchester,
+E27659,Sr. Analyst,IT,Corporate,Female,Caucasian,56,17/7/05,"$137,585.29",5%,Germany,Berlin,
+E52425,Analyst,Sales,Manufacturing,Male,Asian,50,29/1/23,"$81,394.17",10%,Germany,Munich,
+E93627,Manager,Marketing,Manufacturing,Male,Caucasian,61,22/3/22,"$73,430.12",0%,UK,Manchester,10/3/23
+E99551,Analyst,Operations,Manufacturing,Female,Caucasian,48,29/9/02,"$129,726.55",0%,United States,Miami,
+E15737,Director,Finance,Research & Development,Male,Black,53,19/12/95,"$66,826.33",0%,Germany,Munich,
+E78920,Sr. Analyst,IT,Speciality Products,Male,Black,22,13/8/17,"$170,229.55",5%,UK,Manchester,
+E20480,Analyst,Marketing,Research & Development,Female,Hispanic,45,24/9/01,"$151,194.94",0%,Australia,Melbourne,
+E19225,Sr. Analyst,IT,Manufacturing,Male,Black,36,18/9/08,"$114,432.55",5%,Canada,Toronto,
+E33448,Manager,Marketing,Research & Development,Female,Hispanic,64,30/4/06,"$99,790.50",0%,Canada,Toronto,
+E76151,Account Representative,Marketing,Manufacturing,Female,Caucasian,42,21/8/04,"$117,011.39",10%,Australia,Melbourne,
+E93000,Manager,Marketing,Speciality Products,Male,Asian,46,26/7/24,"$147,199.15",10%,China,Shanghai,
+E62047,Sr. Manager,Marketing,Research & Development,Female,Black,55,9/7/97,"$58,912.00",10%,United States,Chicago,
+E38157,Account Representative,IT,Speciality Products,Male,Black,24,21/6/21,"$104,451.77",5%,Canada,Vancouver,
+E86304,Computer Systems Manager,Finance,Speciality Products,Female,Black,58,27/8/04,"$95,971.75",5%,UK,London,
+E73246,Director,HR,Research & Development,Female,Black,58,8/2/07,"$93,416.46",0%,Australia,Melbourne,
+E66925,Manager,IT,Manufacturing,Male,Hispanic,25,26/12/16,"$82,669.68",0%,China,Chongqing,
+E52838,Computer Systems Manager,Finance,Research & Development,Female,Hispanic,60,28/6/12,"$120,535.68",0%,Canada,Vancouver,16/4/19
+E61684,Director,Finance,Speciality Products,Male,Hispanic,58,12/4/18,"$144,344.11",20%,India,Bangalore,2/11/22
+E75774,Manager,Marketing,Manufacturing,Male,Hispanic,57,5/6/06,"$67,735.19",15%,UK,London,
+E78714,Computer Systems Manager,Finance,Research & Development,Female,Hispanic,42,6/2/96,"$135,863.32",20%,United States,New York,
+E65514,Account Representative,Sales,Manufacturing,Female,Caucasian,60,31/1/99,"$131,757.38",10%,Canada,Vancouver,
+E67961,Director,HR,Research & Development,Male,Asian,65,31/12/24,"$92,334.91",0%,United States,New York,25/1/25
+E91396,Director,Sales,Research & Development,Female,Black,41,27/3/01,"$103,008.62",0%,China,Beijing,
+E37770,Computer Systems Manager,Operations,Speciality Products,Female,Asian,64,30/11/14,"$42,574.39",20%,UK,London,6/6/19
+E17878,Sr. Analyst,Finance,Speciality Products,Male,Hispanic,63,17/6/96,"$172,324.71",0%,India,Delhi,24/2/00
+E96520,Account Representative,IT,Research & Development,Female,Hispanic,36,16/6/15,"$177,171.00",20%,UK,London,
+E73525,Technical Architect,Finance,Manufacturing,Female,Black,24,11/12/09,"$74,634.90",20%,China,Shanghai,
+E30578,Sr. Manager,Sales,Speciality Products,Female,Caucasian,37,3/12/06,"$179,439.22",20%,China,Beijing,
+E60747,Sr. Manager,Operations,Speciality Products,Male,Asian,43,13/12/19,"$165,604.54",5%,United States,Phoenix,
+E98866,Computer Systems Manager,HR,Manufacturing,Male,Hispanic,41,1/12/21,"$167,362.96",10%,India,Delhi,2/4/23
+E95520,Director,Operations,Manufacturing,Male,Caucasian,55,3/1/10,"$167,338.78",15%,Australia,Sydney,
+E84035,Director,Sales,Research & Development,Male,Asian,42,14/10/15,"$157,533.15",5%,UK,London,
+E64269,Manager,Sales,Corporate,Female,Asian,34,23/7/12,"$54,948.00",5%,United States,Miami,
+E89377,Computer Systems Manager,Operations,Manufacturing,Male,Black,44,4/2/99,"$51,126.56",15%,Canada,Vancouver,
+E59015,Director,HR,Corporate,Female,Asian,32,7/4/08,"$67,056.38",0%,India,Mumbai,
+E64138,Computer Systems Manager,Marketing,Manufacturing,Male,Black,33,11/10/14,"$169,794.45",15%,Australia,Melbourne,
+E69971,Computer Systems Manager,HR,Corporate,Male,Hispanic,42,17/8/01,"$95,181.10",20%,Germany,Berlin,
+E69193,Analyst,IT,Manufacturing,Female,Black,57,29/10/03,"$94,235.70",0%,Canada,Vancouver,
+E49918,Sr. Analyst,HR,Manufacturing,Female,Caucasian,61,1/9/96,"$168,664.59",20%,Canada,Vancouver,
+E69204,Technical Architect,Marketing,Research & Development,Male,Asian,47,11/4/19,"$97,898.30",15%,United States,Seattle,
+E36467,Analyst,IT,Speciality Products,Female,Asian,29,30/12/09,"$52,766.77",15%,UK,Manchester,9/1/10
+E60343,Director,HR,Corporate,Male,Asian,43,6/11/12,"$119,168.82",5%,Canada,Toronto,3/1/22
+E16725,Manager,Sales,Speciality Products,Female,Caucasian,62,12/7/18,"$65,297.44",5%,Canada,Toronto,
+E43175,Sr. Manager,HR,Corporate,Female,Black,60,21/8/19,"$163,578.41",5%,Canada,Vancouver,
+E67917,Technical Architect,Operations,Research & Development,Male,Caucasian,61,27/5/20,"$128,008.96",5%,United States,Seattle,29/1/22
+E95626,Account Representative,IT,Manufacturing,Male,Caucasian,43,21/7/07,"$168,853.86",0%,United States,Phoenix,
+E31146,Sr. Analyst,Operations,Manufacturing,Female,Caucasian,24,31/10/09,"$53,037.68",10%,China,Shanghai,
+E18869,Manager,Operations,Research & Development,Female,Hispanic,30,16/7/97,"$57,083.25",10%,China,Chongqing,
+E37504,Computer Systems Manager,Operations,Research & Development,Male,Black,52,4/10/17,"$141,370.38",20%,Australia,Melbourne,
+E51482,Sr. Analyst,Operations,Speciality Products,Male,Hispanic,55,24/5/06,"$142,085.86",15%,India,Mumbai,
+E40503,Sr. Analyst,Finance,Research & Development,Male,Black,51,12/5/16,"$127,564.50",0%,UK,London,
+E64346,Manager,IT,Speciality Products,Female,Asian,22,3/11/05,"$129,686.56",10%,China,Beijing,
+E76412,Account Representative,IT,Research & Development,Female,Caucasian,47,24/9/17,"$141,415.53",20%,United States,Seattle,10/12/24
+E54294,Analyst,HR,Research & Development,Male,Hispanic,31,26/5/99,"$127,808.07",20%,China,Shanghai,
+E64257,Sr. Manager,Operations,Speciality Products,Female,Black,35,25/8/19,"$120,835.67",10%,Australia,Melbourne,15/3/22
+E29569,Sr. Analyst,IT,Speciality Products,Female,Asian,58,31/5/12,"$124,796.47",5%,Germany,Berlin,
+E50407,Account Representative,Marketing,Research & Development,Female,Hispanic,27,6/9/05,"$109,587.62",5%,China,Shanghai,
+E49666,Computer Systems Manager,Operations,Speciality Products,Male,Black,45,6/11/17,"$149,892.16",5%,United States,Phoenix,
+E73263,Director,Finance,Speciality Products,Female,Caucasian,42,20/1/09,"$60,061.31",0%,Australia,Sydney,8/8/14
+E14791,Analyst,HR,Research & Development,Male,Caucasian,24,6/11/08,"$136,187.33",20%,Australia,Sydney,
+E16047,Technical Architect,Operations,Speciality Products,Male,Caucasian,62,18/11/18,"$164,898.98",10%,Canada,Toronto,24/5/21
+E79766,Account Representative,HR,Research & Development,Female,Asian,32,8/1/14,"$78,309.16",0%,Germany,Berlin,8/3/16
+E55916,Account Representative,Sales,Manufacturing,Female,Asian,32,8/9/01,"$49,974.00",20%,China,Chongqing,
+E27049,Sr. Manager,HR,Research & Development,Male,Hispanic,25,19/6/09,"$52,056.74",15%,Canada,Vancouver,
+E50952,Account Representative,Finance,Research & Development,Female,Asian,27,13/10/17,"$153,799.14",15%,United States,Phoenix,
+E94465,Analyst,HR,Manufacturing,Male,Asian,61,22/1/08,"$76,127.39",10%,India,Mumbai,
+E97186,Account Representative,Sales,Corporate,Female,Black,26,16/3/18,"$106,546.81",10%,India,Bangalore,
+E46996,Account Representative,Operations,Manufacturing,Male,Hispanic,28,12/8/20,"$85,621.76",0%,Australia,Melbourne,
+E62535,Manager,Finance,Manufacturing,Male,Hispanic,46,29/1/01,"$49,248.39",5%,Australia,Melbourne,
+E67062,Account Representative,Operations,Manufacturing,Male,Black,58,7/2/16,"$157,144.75",0%,Germany,Munich,

@@ -132,13 +132,12 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
     };
 
     const getBarColor = (value, avg) => {
-        if (!useConditionalFormatting) return "var(--color-primary)";
+        if (!useConditionalFormatting) return COLORS[0];
         return value >= avg ? "#4caf50" : "#ff5252"; // Green for above avg, Red for below
     };
 
-    const avgValue = chartData.reduce((acc, curr) => acc + (curr[dataKeyY] || 0), 0) / (chartData.length || 1);
-
     const dataKeyY = `${yAxis}_${aggregation}`;
+    const avgValue = chartData.reduce((acc, curr) => acc + (curr[dataKeyY] || 0), 0) / (chartData.length || 1);
 
     return (
         <div className="chart-builder">
@@ -251,8 +250,9 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
             {error && <div className="message-box message-error">{error}</div>}
 
             <div style={{ marginTop: "30px", minHeight: "400px", border: "1px dashed var(--border-color)", padding: "20px", borderRadius: "var(--radius-md)" }}>
+                {chartData.length > 0 && <div style={{ fontSize: '12px', color: 'var(--color-text-muted)', marginBottom: '10px' }}>Loaded {chartData.length} records</div>}
                 {chartData.length > 0 ? (
-                    <ResponsiveContainer width="100%" height="400px">
+                    <ResponsiveContainer width="100%" height={400}>
                         {(() => {
                             if (chartType === "table") {
                                 return (
@@ -283,7 +283,7 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
                                 const kpiValue = chartData[0][dataKeyY];
                                 return (
                                     <div style={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                                        <h1 style={{ fontSize: "4rem", color: "var(--color-primary)", margin: 0 }}>{typeof kpiValue === 'number' ? kpiValue.toLocaleString() : kpiValue}</h1>
+                                        <h1 style={{ fontSize: "4rem", color: COLORS[0], margin: 0 }}>{typeof kpiValue === 'number' ? kpiValue.toLocaleString() : kpiValue}</h1>
                                         <p style={{ fontSize: "1.2rem", color: "var(--color-text-muted)" }}>{aggregation.toUpperCase()} of {yAxis}</p>
                                     </div>
                                 );
@@ -297,7 +297,7 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
                                         <XAxis dataKey={yAxis} />
                                         <YAxis />
                                         <Tooltip />
-                                        <Bar dataKey={histKey} fill="var(--color-primary)" />
+                                        <Bar dataKey={histKey} fill={COLORS[0]} />
                                     </BarChart>
                                 );
                             }
@@ -324,16 +324,30 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
                                 );
                             }
 
-                            if (chartType === "area") {
+                            const subKeys = subGroup && chartData.length > 0 ? Object.keys(chartData[0]).filter(k => k !== xAxis) : [dataKeyY];
+
+                            if (chartType === "bar") {
                                 return (
-                                    <AreaChart data={chartData}>
+                                    <BarChart data={chartData} onClick={handleChartClick}>
                                         <CartesianGrid strokeDasharray="3 3" />
                                         <XAxis dataKey={xAxis} />
                                         <YAxis />
-                                        <Tooltip />
+                                        <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
                                         <Legend />
-                                        <Area type="monotone" dataKey={dataKeyY} stroke="var(--color-primary)" fill="var(--color-primary)" fillOpacity={0.3} />
-                                    </AreaChart>
+                                        {subKeys.map((key, idx) => (
+                                            <Bar
+                                                key={key}
+                                                dataKey={key}
+                                                stackId={isStacked ? "a" : undefined}
+                                                fill={subGroup ? COLORS[idx % COLORS.length] : COLORS[0]}
+                                                name={subGroup ? key : `${aggregation.toUpperCase()} of ${yAxis}`}
+                                            >
+                                                {!subGroup && chartData.map((entry, index) => (
+                                                    <Cell key={`cell-${index}`} fill={getBarColor(entry[dataKeyY], avgValue)} />
+                                                ))}
+                                            </Bar>
+                                        ))}
+                                    </BarChart>
                                 );
                             }
 
@@ -361,37 +375,35 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
                                         <YAxis yAxisId="right" orientation="right" />
                                         <Tooltip />
                                         <Legend />
-                                        <Bar yAxisId="left" dataKey={dataKeyY} fill="var(--color-primary)" name={`${aggregation.toUpperCase()} of ${yAxis}`} />
+                                        <Bar yAxisId="left" dataKey={dataKeyY} fill={COLORS[0]} name={`${aggregation.toUpperCase()} of ${yAxis}`} />
                                         {secondaryYAxis && (
-                                            <Line yAxisId="right" type="monotone" dataKey={`${secondaryYAxis}_${aggregation}`} stroke="var(--color-secondary)" name={`${aggregation.toUpperCase()} of ${secondaryYAxis}`} />
+                                            <Line yAxisId="right" type="monotone" dataKey={`${secondaryYAxis}_${aggregation}`} stroke={COLORS[1]} name={`${aggregation.toUpperCase()} of ${secondaryYAxis}`} />
                                         )}
                                     </ComposedChart>
                                 );
                             }
 
-                            if (chartType === "bar") {
-                                const subKeys = subGroup ? Object.keys(chartData[0]).filter(k => k !== xAxis) : [dataKeyY];
+                            if (chartType === "area") {
                                 return (
-                                    <BarChart data={chartData} onClick={handleChartClick}>
+                                    <AreaChart data={chartData}>
                                         <CartesianGrid strokeDasharray="3 3" />
                                         <XAxis dataKey={xAxis} />
                                         <YAxis />
-                                        <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
+                                        <Tooltip />
                                         <Legend />
                                         {subKeys.map((key, idx) => (
-                                            <Bar
+                                            <Area
                                                 key={key}
+                                                type="monotone"
                                                 dataKey={key}
-                                                stackId={isStacked ? "a" : undefined}
-                                                fill={subGroup ? COLORS[idx % COLORS.length] : undefined}
+                                                stroke={COLORS[idx % COLORS.length]}
+                                                fill={COLORS[idx % COLORS.length]}
+                                                fillOpacity={0.3}
                                                 name={subGroup ? key : `${aggregation.toUpperCase()} of ${yAxis}`}
-                                            >
-                                                {!subGroup && chartData.map((entry, index) => (
-                                                    <Cell key={`cell-${index}`} fill={getBarColor(entry[dataKeyY], avgValue)} />
-                                                ))}
-                                            </Bar>
+                                                stackId={isStacked ? "1" : undefined}
+                                            />
                                         ))}
-                                    </BarChart>
+                                    </AreaChart>
                                 );
                             }
 
@@ -403,7 +415,16 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
                                         <YAxis />
                                         <Tooltip />
                                         <Legend />
-                                        <Line type="monotone" dataKey={dataKeyY} stroke="var(--color-primary)" strokeWidth={2} name={`${aggregation.toUpperCase()} of ${yAxis}`} />
+                                        {subKeys.map((key, idx) => (
+                                            <Line
+                                                key={key}
+                                                type="monotone"
+                                                dataKey={key}
+                                                stroke={COLORS[idx % COLORS.length]}
+                                                strokeWidth={2}
+                                                name={subGroup ? key : `${aggregation.toUpperCase()} of ${yAxis}`}
+                                            />
+                                        ))}
                                     </LineChart>
                                 );
                             }
