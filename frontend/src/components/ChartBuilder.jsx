@@ -4,8 +4,9 @@ import {
     XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, Legend,
     AreaChart, Area, ComposedChart, FunnelChart, Funnel, LabelList
 } from "recharts";
-
 import api from "../services/api";
+
+const COLORS = ["#4e79a7", "#f28e2c", "#e15759", "#76b7b2", "#59a14f", "#edc949", "#af7aa1", "#ff9da7", "#9c755f", "#bab0ab"];
 
 function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFilters, onInteract }) {
     const [columns, setColumns] = useState([]);
@@ -249,40 +250,171 @@ function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFil
 
             {error && <div className="message-box message-error">{error}</div>}
 
-            <div style={{ marginTop: "30px", height: "400px", border: "1px dashed var(--border-color)", padding: "10px", borderRadius: "var(--radius-md)" }}>
+            <div style={{ marginTop: "30px", minHeight: "400px", border: "1px dashed var(--border-color)", padding: "20px", borderRadius: "var(--radius-md)" }}>
                 {chartData.length > 0 ? (
-                    <ResponsiveContainer width="100%" height="100%">
-                        {chartType === "bar" ? (
-                            <BarChart data={chartData} onClick={handleChartClick}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey={xAxis} />
-                                <YAxis />
-                                <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
-                                <Legend />
-                                <Bar
-                                    dataKey={dataKeyY}
-                                    name={`${aggregation.toUpperCase()} of ${yAxis}`}
-                                >
-                                    {chartData.map((entry, index) => (
-                                        <cell key={`cell-${index}`} fill={getBarColor(entry[dataKeyY], avgValue)} />
-                                    ))}
-                                </Bar>
-                            </BarChart>
-                        ) : (
-                            <LineChart data={chartData} onClick={handleChartClick}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey={xAxis} />
-                                <YAxis />
-                                <Tooltip />
-                                <Legend />
-                                <Line type="monotone" dataKey={dataKeyY} stroke="var(--color-tertiary)" strokeWidth={2} name={`${aggregation.toUpperCase()} of ${yAxis}`} activeDot={{ r: 8, onClick: (e, payload) => handleChartClick({ activePayload: [payload] }) }} />
-                            </LineChart>
-                        )}
+                    <ResponsiveContainer width="100%" height="400px">
+                        {(() => {
+                            if (chartType === "table") {
+                                return (
+                                    <div style={{ maxHeight: "400px", overflow: "auto" }}>
+                                        <table className="data-table" style={{ width: "100%", borderCollapse: "collapse" }}>
+                                            <thead>
+                                                <tr>
+                                                    {Object.keys(chartData[0]).map(col => (
+                                                        <th key={col} style={{ textAlign: "left", padding: "12px", borderBottom: "2px solid var(--border-color)", position: "sticky", top: 0, background: "white" }}>{col}</th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {chartData.slice(0, 100).map((row, i) => (
+                                                    <tr key={i} style={{ borderBottom: "1px solid var(--border-color)" }}>
+                                                        {Object.values(row).map((val, j) => (
+                                                            <td key={j} style={{ padding: "10px" }}>{typeof val === 'number' ? val.toLocaleString() : String(val)}</td>
+                                                        ))}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                );
+                            }
+
+                            if (chartType === "kpi") {
+                                const kpiValue = chartData[0][dataKeyY];
+                                return (
+                                    <div style={{ height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                                        <h1 style={{ fontSize: "4rem", color: "var(--color-primary)", margin: 0 }}>{typeof kpiValue === 'number' ? kpiValue.toLocaleString() : kpiValue}</h1>
+                                        <p style={{ fontSize: "1.2rem", color: "var(--color-text-muted)" }}>{aggregation.toUpperCase()} of {yAxis}</p>
+                                    </div>
+                                );
+                            }
+
+                            if (chartType === "histogram") {
+                                const histKey = `${yAxis}_count`;
+                                return (
+                                    <BarChart data={chartData}>
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey={yAxis} />
+                                        <YAxis />
+                                        <Tooltip />
+                                        <Bar dataKey={histKey} fill="var(--color-primary)" />
+                                    </BarChart>
+                                );
+                            }
+
+                            if (chartType === "pie") {
+                                return (
+                                    <PieChart>
+                                        <Pie
+                                            data={chartData}
+                                            dataKey={dataKeyY}
+                                            nameKey={xAxis}
+                                            cx="50%"
+                                            cy="50%"
+                                            outerRadius={150}
+                                            label
+                                        >
+                                            {chartData.map((entry, index) => (
+                                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                            ))}
+                                        </Pie>
+                                        <Tooltip />
+                                        <Legend />
+                                    </PieChart>
+                                );
+                            }
+
+                            if (chartType === "area") {
+                                return (
+                                    <AreaChart data={chartData}>
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey={xAxis} />
+                                        <YAxis />
+                                        <Tooltip />
+                                        <Legend />
+                                        <Area type="monotone" dataKey={dataKeyY} stroke="var(--color-primary)" fill="var(--color-primary)" fillOpacity={0.3} />
+                                    </AreaChart>
+                                );
+                            }
+
+                            if (chartType === "funnel") {
+                                return (
+                                    <FunnelChart>
+                                        <Tooltip />
+                                        <Funnel
+                                            dataKey={dataKeyY}
+                                            data={chartData}
+                                            isAnimationActive
+                                        >
+                                            <LabelList position="right" fill="#888" dataKey={xAxis} stroke="none" />
+                                        </Funnel>
+                                    </FunnelChart>
+                                );
+                            }
+
+                            if (chartType === "dual_axis") {
+                                return (
+                                    <ComposedChart data={chartData}>
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey={xAxis} />
+                                        <YAxis yAxisId="left" />
+                                        <YAxis yAxisId="right" orientation="right" />
+                                        <Tooltip />
+                                        <Legend />
+                                        <Bar yAxisId="left" dataKey={dataKeyY} fill="var(--color-primary)" name={`${aggregation.toUpperCase()} of ${yAxis}`} />
+                                        {secondaryYAxis && (
+                                            <Line yAxisId="right" type="monotone" dataKey={`${secondaryYAxis}_${aggregation}`} stroke="var(--color-secondary)" name={`${aggregation.toUpperCase()} of ${secondaryYAxis}`} />
+                                        )}
+                                    </ComposedChart>
+                                );
+                            }
+
+                            if (chartType === "bar") {
+                                const subKeys = subGroup ? Object.keys(chartData[0]).filter(k => k !== xAxis) : [dataKeyY];
+                                return (
+                                    <BarChart data={chartData} onClick={handleChartClick}>
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey={xAxis} />
+                                        <YAxis />
+                                        <Tooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} />
+                                        <Legend />
+                                        {subKeys.map((key, idx) => (
+                                            <Bar
+                                                key={key}
+                                                dataKey={key}
+                                                stackId={isStacked ? "a" : undefined}
+                                                fill={subGroup ? COLORS[idx % COLORS.length] : undefined}
+                                                name={subGroup ? key : `${aggregation.toUpperCase()} of ${yAxis}`}
+                                            >
+                                                {!subGroup && chartData.map((entry, index) => (
+                                                    <Cell key={`cell-${index}`} fill={getBarColor(entry[dataKeyY], avgValue)} />
+                                                ))}
+                                            </Bar>
+                                        ))}
+                                    </BarChart>
+                                );
+                            }
+
+                            if (chartType === "line") {
+                                return (
+                                    <LineChart data={chartData} onClick={handleChartClick}>
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey={xAxis} />
+                                        <YAxis />
+                                        <Tooltip />
+                                        <Legend />
+                                        <Line type="monotone" dataKey={dataKeyY} stroke="var(--color-primary)" strokeWidth={2} name={`${aggregation.toUpperCase()} of ${yAxis}`} />
+                                    </LineChart>
+                                );
+                            }
+
+                            return null;
+                        })()}
                     </ResponsiveContainer>
                 ) : (
-                    <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-text-muted)", flexDirection: "column" }}>
+                    <div style={{ height: "400px", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-text-muted)", flexDirection: "column" }}>
                         <span style={{ fontSize: "3rem", marginBottom: "1rem" }}>📊</span>
-                        <p>Select options and click "Generate Chart" to view the result</p>
+                        <p>Configure options and click "Generate View" to preview</p>
                     </div>
                 )}
             </div>

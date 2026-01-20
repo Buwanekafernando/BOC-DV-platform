@@ -81,7 +81,11 @@ function Dashboard({ datasetId, initialData }) {
                 chart_type: c.chart_type,
                 x_axis: c.x_axis,
                 y_axis: c.y_axis,
-                aggregation: c.aggregation
+                sub_group: c.sub_group,
+                secondary_y_axis: c.secondary_y_axis,
+                aggregation: c.aggregation,
+                is_stacked: c.is_stacked,
+                bins: c.bins
             })),
             layout: { columns: 2 }
         };
