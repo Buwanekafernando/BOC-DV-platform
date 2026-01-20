@@ -11,6 +11,21 @@ const COLORS = ["#4e79a7", "#f28e2c", "#e15759", "#76b7b2", "#59a14f", "#edc949"
 function ChartBuilder({ datasetId, onUpdate, initialConfig, filters: externalFilters, onInteract }) {
     const [title, setTitle] = useState("");
     const [viewMode, setViewMode] = useState(false);
+    const [columns, setColumns] = useState([]);
+    const [xAxis, setXAxis] = useState("");
+    const [yAxis, setYAxis] = useState("");
+    const [subGroup, setSubGroup] = useState("");
+    const [secondaryYAxis, setSecondaryYAxis] = useState("");
+    const [aggregation, setAggregation] = useState("sum");
+    const [chartType, setChartType] = useState("bar");
+    const [sortOrder, setSortOrder] = useState("desc");
+    const [isStacked, setIsStacked] = useState(false);
+    const [bins, setBins] = useState(10);
+    const [useConditionalFormatting, setUseConditionalFormatting] = useState(false);
+    const [chartData, setChartData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [initialized, setInitialized] = useState(false);
 
     useEffect(() => {
         if (!datasetId) return;
