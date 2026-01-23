@@ -6,7 +6,7 @@ import DatasetProfile from "./components/DatasetProfile";
 import ChartBuilder from "./components/ChartBuilder";
 import Dashboard from './components/Dashboard';
 import DashboardList from './components/DashboardList';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
+
 import Login from './components/Login';
 import DataPreparation from './components/DataPreparation';
 import MeasureBuilder from './components/MeasureBuilder';
@@ -75,12 +75,7 @@ function MainApp() {
                 icon="🔢"
                 label="Data View"
               />
-              <NavButton
-                active={currentView === "analytics"}
-                onClick={() => setCurrentView("analytics")}
-                icon="📈"
-                label="Analytics"
-              />
+
               <div style={{ margin: '10px 0', borderBottom: '1px solid var(--border-color)' }}></div>
               <NavButton
                 active={currentView === "prep"}
@@ -149,14 +144,7 @@ function MainApp() {
                   </div>
                 )}
 
-                {currentView === "analytics" && (
-                  <div className="fade-in">
-                    <h2 className="section-title">Advanced Analytics</h2>
-                    <div className="card">
-                      <AdvancedAnalytics datasetId={datasetId} />
-                    </div>
-                  </div>
-                )}
+
 
                 {currentView === "prep" && (
                   <div className="fade-in">
